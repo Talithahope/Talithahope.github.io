@@ -92,6 +92,10 @@
             text-align: center;
             padding: 6rem 0;
             color: white;
+            background: linear-gradient(rgba(45, 74, 62, 0.7), rgba(74, 139, 122, 0.7)), url('website_header.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
         }
 
         .hero h1 {
@@ -186,13 +190,30 @@
             font-weight: 400;
         }
 
-        .contact {
+        .profile-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 2rem auto;
+            display: block;
+            border: 4px solid #6ba89d;
+            box-shadow: 0 10px 30px rgba(45, 74, 62, 0.2);
+        }
+
+        .research-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+        }
             text-align: center;
             background: linear-gradient(135deg, #4a8b7a 0%, #6ba89d 50%, #8bc4c0 100%);
             color: white;
         }
 
-        .contact-links {
+        .contact {
             display: flex;
             justify-content: center;
             gap: 2rem;
@@ -200,7 +221,7 @@
             flex-wrap: wrap;
         }
 
-        .contact-link {
+        .contact-links {
             color: white;
             text-decoration: none;
             padding: 1rem 1.5rem;
@@ -261,6 +282,7 @@
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#research">Research</a></li>
+                <li><a href="#communication">Science Communication</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -268,7 +290,7 @@
 
     <main>
         <section id="home" class="hero">
-            <div class="container">
+        <section id="contact" class="contact">
                 <h1>Hello, I'm Tali</h1>
                 <p>Human-Environment Researcher | Climate Adaptation | Agricultural Health</p>
                 <a href="#about" class="cta-button">Learn More About Me</a>
@@ -278,6 +300,7 @@
         <section id="about" class="section">
             <div class="container">
                 <h2>About Me</h2>
+                <img src="Headshot.THNM_2025_02.jpg" alt="Talitha Neesham-McTiernan" class="profile-image">
                 <div class="cards">
                     <div class="card">
                         <h3>About My Research</h3>
@@ -297,7 +320,7 @@
                     </div>
                     <div class="card">
                         <h3>Background</h3>
-                        <p>I hold previous degrees from the University of Sheffield in Environmental Change & International Development (MSc) and Physical Geography (BSc). I combine GIS techniques, microclimate analysis, mathematical modeling, and in-depth interviews to study how agricultural communities can adapt to climate change.</p>
+                        <p>Originally from a small town in the Lake District, England, I hold previous degrees from the University of Sheffield in Environmental Change & International Development (MSc) and Physical Geography (BSc). My research has taken me across Europe, North America, and Africa, combining GIS techniques, microclimate analysis, and community engagement to study climate adaptation.</p>
                     </div>
                 </div>
             </div>
@@ -308,6 +331,7 @@
                 <h2>Research Projects</h2>
                 <div class="cards">
                     <div class="card">
+                        <img src="JSG.jpg" alt="Agrivoltaic research site" class="research-image">
                         <h3>Agrivoltaic Spatial Suitability Modeling</h3>
                         <p>Using spatial multi-criteria decision analysis to identify optimal locations for agrivoltaic deployment across the Southwest under current and projected climate conditions through 2080. This work includes published research on suitability modeling for Great Britain and ongoing projects in East Africa.</p>
                         <div class="skills">
@@ -317,6 +341,7 @@
                         </div>
                     </div>
                     <div class="card">
+                        <img src="AV_Tanzania_Img1.jpg" alt="Agrivoltaic site in Tanzania" class="research-image">
                         <h3>Farmworker Heat Stress Mitigation</h3>
                         <p>Quantifying how agrivoltaic systems mitigate heat stress for agricultural workers through predictive thermal modeling and semi-structured interviews with farmworkers to understand their lived experiences and occupational health impacts under climate change.</p>
                         <div class="skills">
@@ -329,13 +354,40 @@
             </div>
         </section>
 
-        <section id="contact" class="contact">
+        <section id="communication" class="section">
+            <div class="container">
+                <h2>Science Communication</h2>
+                <div class="cards">
+                    <div class="card">
+                        <img src="AV_Japan_Img3.Jpg" alt="Agrivoltaic research presentation" class="research-image">
+                        <h3>Scientific Storytelling</h3>
+                        <p>I'm a strong believer that science is only helpful if we can communicate it well. Through conference presentations, blog posts, and community engagement, I work to make agrivoltaics research accessible to broader audiences including farmers, policymakers, and the general public.</p>
+                        <div class="skills">
+                            <span class="skill-tag">Public Speaking</span>
+                            <span class="skill-tag">Science Writing</span>
+                            <span class="skill-tag">Community Engagement</span>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="AV_B2_img2.jpg" alt="Field research and outreach" class="research-image">
+                        <h3>Global Research & Outreach</h3>
+                        <p>My research has taken me across three continents, where I combine rigorous scientific methods with participatory approaches. From organizing international workshops to presenting at conferences worldwide, I believe in collaborative science that bridges academic research with practical solutions.</p>
+                        <div class="skills">
+                            <span class="skill-tag">International Collaboration</span>
+                            <span class="skill-tag">Workshop Facilitation</span>
+                            <span class="skill-tag">Participatory Research</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
             <div class="container">
                 <h2>Get In Touch</h2>
                 <p>I'm interested in collaborations in human-environment research, climate adaptation for agricultural systems, agrivoltaics, and interdisciplinary approaches to agricultural sustainability. Let's connect!</p>
                 <div class="contact-links">
                     <a href="mailto:talimctiernan@arizona.edu" class="contact-link">Email</a>
                     <a href="https://geography.arizona.edu/person/tali-neesham-mctiernan" class="contact-link">University Profile</a>
+                    <a href="https://www.linkedin.com/in/talithahopenm" class="contact-link">LinkedIn</a>
                     <a href="https://scholar.google.com/citations?user=fTl8VucAAAAJ&hl=en" class="contact-link">Google Scholar</a>
                     <a href="https://github.com/talithahope" class="contact-link">GitHub</a>
                 </div>
