@@ -141,6 +141,35 @@
             background: #f0f7f5;
         }
 
+        .research-section {
+            background: linear-gradient(rgba(240, 247, 245, 0.9), rgba(255, 255, 255, 0.9)), url('AV_B2_img2.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .communication-section {
+            background: linear-gradient(rgba(45, 74, 62, 0.7), rgba(74, 139, 122, 0.7)), url('THNM_Agrivoltaics_world_confernce_presentation.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+        }
+
+        .communication-section h2 {
+            color: white;
+        }
+
+        .communication-section .card {
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(15px);
+            color: #2d4a3e;
+        }
+
+        .communication-section .card h3 {
+            color: #4a8b7a;
+        }
+
         .section h2 {
             text-align: center;
             font-size: 2.5rem;
@@ -193,6 +222,15 @@
             font-weight: 400;
         }
 
+        .skill-tag.accent {
+            background: linear-gradient(45deg, #8bc4c0, #a8d5d0);
+            color: #2d4a3e;
+        }
+
+        .skill-tag.primary {
+            background: linear-gradient(45deg, #2d4a3e, #4a8b7a);
+        }
+
         .profile-image {
             width: 200px;
             height: 200px;
@@ -202,11 +240,30 @@
             display: block;
             border: 4px solid #6ba89d;
             box-shadow: 0 10px 30px rgba(45, 74, 62, 0.2);
+            /* Fallback background in case image doesn't load */
+            background: linear-gradient(135deg, #4a8b7a, #6ba89d);
+        }
+
+        /* Fallback styling if image fails to load */
+        .profile-placeholder {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin: 0 auto 2rem auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #4a8b7a, #6ba89d);
+            border: 4px solid #6ba89d;
+            box-shadow: 0 10px 30px rgba(45, 74, 62, 0.2);
+            color: white;
+            font-size: 3rem;
+            font-weight: 500;
         }
 
         .contact {
             text-align: center;
-            background: linear-gradient(135deg, #4a8b7a 0%, #6ba89d 50%, #8bc4c0 100%);
+            background: linear-gradient(135deg, #2d4a3e 0%, #4a8b7a 50%, #6ba89d 100%);
             color: white;
         }
 
@@ -231,6 +288,26 @@
         .contact-link:hover {
             background: rgba(255, 255, 255, 0.2);
             transform: translateY(-2px);
+        }
+
+        .research-group-link {
+            text-align: center;
+            margin-top: 2rem;
+            padding: 1rem;
+            background: rgba(107, 168, 157, 0.1);
+            border-radius: 10px;
+            border-left: 4px solid #6ba89d;
+        }
+
+        .research-group-link a {
+            color: #4a8b7a;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .research-group-link a:hover {
+            color: #2d4a3e;
         }
 
         footer {
@@ -269,7 +346,7 @@
                 align-items: center;
             }
 
-            .profile-image {
+            .profile-image, .profile-placeholder {
                 width: 150px;
                 height: 150px;
             }
@@ -284,6 +361,7 @@
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#research">Research</a></li>
+                <li><a href="#communication">Communication</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -301,54 +379,86 @@
         <section id="about" class="section">
             <div class="container">
                 <h2>About Me</h2>
+                <!-- Your headshot image -->
                 <img src="Headshot_THNM_2025_02.jpg" alt="Talitha Neesham-McTiernan" class="profile-image">
+                <div class="profile-placeholder" style="display: none;">TH</div>
+                
                 <div class="cards">
                     <div class="card">
                         <h3>About My Research</h3>
-                        <p>I'm a 3rd year PhD candidate at the University of Arizona researching climate adaptation strategies for agricultural systems. My work explores how agrivoltaics can create benefits across entire agricultural systems - supporting productivity, protecting worker health, and enhancing environmental sustainability simultaneously.</p>
+                        <p>I'm a 3rd year PhD candidate in the School of Geography, Development, and Environment at the University of Arizona, investigating how agrivoltaic systems can serve as comprehensive climate adaptation strategies for agricultural communities. My work examines the interconnected benefits of combining solar energy with farming - from protecting farmworker health through heat mitigation to enhancing crop productivity and environmental sustainability in the face of climate change.</p>
+                        <div class="skills">
+                            <span class="skill-tag accent">Climate Adaptation</span>
+                            <span class="skill-tag">Agrivoltaics</span>
+                            <span class="skill-tag primary">Systems thinking</span>
+                        </div>
                     </div>
                     <div class="card">
                         <h3>Research Approach</h3>
-                        <p>As a human-environment researcher specializing in climate adaptation and agrivoltaics, I focus on agricultural health outcomes. My interdisciplinary approach combines mathematical modeling with qualitative methods like interviews to understand complex agricultural system dynamics and adaptation pathways.</p>
+                        <p>My interdisciplinary methodology bridges physical and human geography through mixed-methods research. I combine microclimate monitoring and spatial modeling to quantify environmental changes, while using semi-structured interviews and participatory research to understand farmer perspectives and adaptation experiences. This human-environment approach allows me to assess both the measurable impacts of agrivoltaic systems and the lived experiences of agricultural communities adapting to climate change.</p>
                         <div class="skills">
-                            <span class="skill-tag">Human-Environment Systems</span>
-                            <span class="skill-tag">Climate Adaptation</span>
-                            <span class="skill-tag">Agrivoltaics</span>
-                            <span class="skill-tag">Agricultural Health</span>
-                            <span class="skill-tag">Mathematical Modeling</span>
-                            <span class="skill-tag">Mixed Methods</span>
+                            <span class="skill-tag">Mixed methods</span>
+                            <span class="skill-tag accent">Empirical Analysis</span>
+                            <span class="skill-tag primary">Qualitative Interviews</span>
                         </div>
                     </div>
                     <div class="card">
                         <h3>Background</h3>
-                        <p>Originally from a small town in the Lake District, England, I hold previous degrees from the University of Sheffield in Environmental Change & International Development (MSc) and Physical Geography (BSc). My research has taken me across Europe, North America, and Africa, where I conduct field research and develop spatial models to understand how agricultural systems can adapt to changing climates.</p>
+                        <p>Originally from a small town in the Lake District, England, I hold degrees from the University of Sheffield in Environmental Change & International Development (MSc) and Physical Geography (BSc). During my master's degree, I began specializing in climate change and agriculture through two foundational projects: analyzing farmers' perceptions of and adaptations to climate change in Sierra Leone (combining climate data analysis with farmer interviews), and mapping suitable locations for agrivoltaic implementation in East Africa. This early work established my focus on understanding both the scientific and human dimensions of agricultural climate adaptation, with agrivoltaic systems emerging as a key area of expertise.</p>
+                        <div class="skills">
+                            <span class="skill-tag">Climate Change</span>
+                            <span class="skill-tag accent">Agriculture</span>
+                            <span class="skill-tag primary">Adaptation Strategies</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="research" class="section">
+        <section id="research" class="section research-section">
             <div class="container">
                 <h2>Research Projects</h2>
                 <div class="cards">
                     <div class="card">
                         <h3>Agrivoltaic Spatial Suitability Modeling</h3>
-                        <p>Using spatial multi-criteria decision analysis to identify optimal locations for agrivoltaic deployment across the Southwest under current and projected climate conditions through 2080. This work includes published research on suitability modeling for Great Britain and ongoing projects in East Africa.</p>
+                        <p>I use spatial analysis to identify optimal locations for agrivoltaic deployment across Great Britain, the Southwestern U.S., and East Africa. My approach employs multi-criteria decision analysis to assess technical feasibility, with published research including current suitability mapping for Great Britain and climate-informed projections for the Southwestern U.S. through 2080. This work began during my master's degree with participatory modeling in East Africa conducted in partnership with the World Agroforestry Center, which integrated stakeholder engagement through collaborative workshops to understand community priorities and define suitable use cases for different agricultural contexts.</p>
                         <div class="skills">
                             <span class="skill-tag">Spatial MCDA</span>
-                            <span class="skill-tag">Climate Projections</span>
-                            <span class="skill-tag">GIS Modeling</span>
+                            <span class="skill-tag accent">Climate Projections</span>
+                            <span class="skill-tag primary">GIS Modeling</span>
                         </div>
                     </div>
                     <div class="card">
                         <h3>Farmworker Heat Stress Mitigation</h3>
-                        <p>Quantifying how agrivoltaic systems mitigate heat stress for agricultural workers through predictive thermal modeling and semi-structured interviews with farmworkers to understand their lived experiences and occupational health impacts under climate change.</p>
+                        <p>I investigate how agrivoltaic systems can protect agricultural workers from heat exposure using both environmental data and worker experiences. My research combines microclimate monitoring at agrivoltaic and traditional field sites to quantify thermal conditions, with semi-structured interviews and participant observation to understand how farmworkers experience working under solar panels. This approach bridges quantitative measurements of heat mitigation with qualitative insights into occupational health impacts, providing a comprehensive assessment of agrivoltaics as a worker protection strategy.</p>
                         <div class="skills">
                             <span class="skill-tag">Microclimate Monitoring</span>
-                            <span class="skill-tag">Worker Health</span>
-                            <span class="skill-tag">Mixed Methods</span>
+                            <span class="skill-tag accent">Worker Health</span>
+                            <span class="skill-tag primary">Participant Observation</span>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Science Communication Section -->
+        <section id="communication" class="section communication-section">
+            <div class="container">
+                <h2>Science Communication</h2>
+                <div class="cards">
+                    <div class="card">
+                        <h3>Making Science Accessible</h3>
+                        <p>I believe science is only truly valuable when it can be communicated effectively to diverse audiences. My approach focuses on storytelling and connecting research findings to real-world impacts and human experiences. I work to ground academic research in everyday realities by linking news headlines about deadly heat waves to my research on farmworker protection, explaining how climate projections translate to local farming challenges, and highlighting the human stories behind the data. From presenting to international conferences and engaging with policymakers to speaking with community groups and co-authoring practical resources like the <a href="https://www.agrisolarclearinghouse.org/wp-content/uploads/2025/02/Best-Practices-in-Agrisolar.pdf" target="_blank" style="color: #4a8b7a; font-weight: 500;">Best Practices in Agrisolar guide</a>, I strive to make complex climate and agricultural research both understandable and compelling.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Research Group Section -->
+        <section class="section">
+            <div class="container">
+                <div class="research-group-link">
+                    <p><strong>Research Group:</strong> I'm part of the <a href="http://www.barrongafford.org/people.html" target="_blank">Barron-Gafford Research Group</a> at the University of Arizona, led by my supervisor Dr. Greg Barron-Gafford.</p>
                 </div>
             </div>
         </section>
@@ -356,7 +466,7 @@
         <section id="contact" class="contact">
             <div class="container">
                 <h2>Get In Touch</h2>
-                <p>I'm interested in collaborations in human-environment research, climate adaptation for agricultural systems, agrivoltaics, and interdisciplinary approaches to agricultural sustainability. Let's connect!</p>
+                <p>Interested in my work or want to collaborate? I'd love to chat</p>
                 <div class="contact-links">
                     <a href="mailto:talimctiernan@arizona.edu" class="contact-link">Email</a>
                     <a href="https://geography.arizona.edu/person/tali-neesham-mctiernan" class="contact-link">University Profile</a>
