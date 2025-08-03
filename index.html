@@ -141,6 +141,13 @@
             background: #f0f7f5;
         }
 
+        .about-section {
+            background: linear-gradient(rgba(240, 247, 245, 0.9), rgba(255, 255, 255, 0.9)), url('AV_Tanzania_Img1.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
         .research-section {
             background: linear-gradient(rgba(240, 247, 245, 0.9), rgba(255, 255, 255, 0.9)), url('AV_B2_img2.jpg');
             background-size: cover;
@@ -168,6 +175,10 @@
 
         .communication-section .card h3 {
             color: #4a8b7a;
+        }
+
+        .research-group-section {
+            background: linear-gradient(135deg, #e8f4f8 0%, #d1e7dd 100%);
         }
 
         .section h2 {
@@ -293,10 +304,11 @@
         .research-group-link {
             text-align: center;
             margin-top: 2rem;
-            padding: 1rem;
-            background: rgba(107, 168, 157, 0.1);
-            border-radius: 10px;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
             border-left: 4px solid #6ba89d;
+            box-shadow: 0 5px 20px rgba(45, 74, 62, 0.08);
         }
 
         .research-group-link a {
@@ -376,7 +388,7 @@
             </div>
         </section>
 
-        <section id="about" class="section">
+        <section id="about" class="section about-section">
             <div class="container">
                 <h2>About Me</h2>
                 <!-- Your headshot image -->
@@ -404,7 +416,7 @@
                     </div>
                     <div class="card">
                         <h3>Background</h3>
-                        <p>Originally from a small town in the Lake District, England, I hold degrees from the University of Sheffield in Environmental Change & International Development (MSc) and Physical Geography (BSc). During my master's degree, I began specializing in climate change and agriculture through two foundational projects: analyzing farmers' perceptions of and adaptations to climate change in Sierra Leone (combining climate data analysis with farmer interviews), and mapping suitable locations for agrivoltaic implementation in East Africa. This early work established my focus on understanding both the scientific and human dimensions of agricultural climate adaptation, with agrivoltaic systems emerging as a key area of expertise.</p>
+                        <p>Originally from a small town in the Lake District, England, I hold degrees from the University of Sheffield in Environmental Change & International Development (MSc) and Physical Geography (BSc). My specialization in climate change and agriculture began during my master's degree with research on farmers' perceptions of and adaptations to climate change in Sierra Leone and agrivoltaic spatial modeling in East Africa, establishing my focus on bridging scientific analysis with human perspectives in agricultural climate adaptation.</p>
                         <div class="skills">
                             <span class="skill-tag">Climate Change</span>
                             <span class="skill-tag accent">Agriculture</span>
@@ -455,7 +467,7 @@
         </section>
 
         <!-- Research Group Section -->
-        <section class="section">
+        <section class="section research-group-section">
             <div class="container">
                 <div class="research-group-link">
                     <p><strong>Research Group:</strong> I'm part of the <a href="http://www.barrongafford.org/people.html" target="_blank">Barron-Gafford Research Group</a> at the University of Arizona, led by my supervisor Dr. Greg Barron-Gafford.</p>
