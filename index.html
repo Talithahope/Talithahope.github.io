@@ -85,6 +85,25 @@
 
         .transition-divider { height: 4px; background: linear-gradient(90deg, var(--sage) 0%, var(--blossom-soft) 100%); opacity: 0.4; }
 
+        /* Background image sections */
+        .bg-photo {
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .bg-photo-pubs {
+            background-image: linear-gradient(rgba(254,248,250,0.88), rgba(254,245,240,0.9)), url('AV_Japan_Img3.jpg');
+        }
+        .bg-photo-group {
+            background-image: linear-gradient(rgba(232,242,234,0.85), rgba(232,242,234,0.9)), url('https://talithahope.github.io/AV_B2_img2.jpg');
+        }
+        .bg-photo-about {
+            background-image: linear-gradient(rgba(242,248,243,0.92), rgba(242,248,243,0.88)), url('https://talithahope.github.io/AV_Tanzania_Img1.jpg');
+        }
+        @media (max-width: 900px) {
+            .bg-photo { background-attachment: scroll; }
+        }
+
         /* ABOUT */
         .about-grid { display: grid; grid-template-columns: 1fr 1.3fr; gap: 3.5rem; align-items: start; }
         .about-image-col { position: sticky; top: 120px; }
@@ -221,7 +240,7 @@
         .comms-card a { color: var(--fern); text-decoration: none; font-size: 0.8rem; font-weight: 500; }
         .comms-card a:hover { color: var(--petal); }
 
-        .group-banner { background: var(--meadow); padding: 2.5rem 2rem; text-align: center; }
+        .group-banner { background-color: var(--meadow); padding: 2.5rem 2rem; text-align: center; }
         .group-banner p { font-size: 0.95rem; color: var(--text-muted); max-width: 600px; margin: 0 auto; }
         .group-banner a { color: var(--fern); text-decoration: none; font-weight: 500; border-bottom: 1px solid var(--moss); }
         .group-banner a:hover { color: var(--petal); border-color: var(--petal); }
@@ -308,7 +327,7 @@
             <a href="#about" class="hero-cta">Learn more about my work</a>
         </div>
         <div class="hero-image-wrapper">
-            <img src="Headshot_THNM_2025_02.jpg" alt="Talitha H. Neesham-McTiernan">
+            <img src="Headshot_THNM_2025_02.jpg" alt="Talitha Neesham-McTiernan">
         </div>
     </div>
     <div class="scroll-indicator">Scroll<svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg></div>
@@ -317,7 +336,7 @@
 <!-- ═══ GREEN WORLD ═══ -->
 
 <!-- ABOUT -->
-<div class="section-wrap green-light">
+<div class="section-wrap green-light bg-photo bg-photo-about">
     <section id="about" class="section">
         <div class="about-grid">
             <div class="about-image-col">
@@ -454,7 +473,7 @@
         </div>
         <div class="phd-overview reveal">
             <p>My dissertation focuses on agrivoltaics, the integration of agriculture under and around solar panels, as a practical climate adaptation strategy. I ask whether a single intervention can simultaneously sustain agricultural production, advance renewable energy deployment, and protect the health of farmworkers.</p>
-            <p>Agrivoltaic systems shade and cool the environment beneath them, reducing moisture loss and directly countering several pressures climate change places on agriculture. My research examines this from three interconnected angles:</p>
+            <p>Agrivoltaic systems can shade and cool the environment beneath them, reducing moisture loss and directly countering several pressures climate change places on agriculture. My research examines this from three interconnected angles:</p>
         </div>
         <div class="research-cards">
             <div class="research-card reveal">
@@ -507,7 +526,7 @@
                 <img src="B2-sunflowers-standing-v2.jpg" alt="Among the sunflowers in an agrivoltaic system" class="fieldwork-img">
                 <div class="fieldwork-body">
                     <div class="fieldwork-location">Biosphere 2, Arizona</div>
-                    <h3>Agrivoltaic research plots</h3>
+                    <h3>Agrivoltaic research</h3>
                     <p>Sunflowers thriving under solar panels at the University of Arizona's Biosphere 2 agrivoltaic field site.</p>
                 </div>
             </div>
@@ -540,7 +559,7 @@
 </div>
 
 <!-- PUBLICATIONS -->
-<div class="section-wrap blossom-warm">
+<div class="section-wrap blossom-warm bg-photo bg-photo-pubs">
     <section id="publications" class="section">
         <div class="section-label reveal">Publications</div>
         <h2 class="reveal">Selected work</h2>
@@ -620,7 +639,7 @@
 <!-- ═══ BACK TO GREEN ═══ -->
 <div class="transition-divider"></div>
 
-<div class="group-banner">
+<div class="group-banner bg-photo bg-photo-group">
     <div><p>I'm part of the <a href="https://salsav.org/team" target="_blank">SALSA Agrivoltaics</a> research group at the University of Arizona, led by my supervisor Prof. Greg Barron-Gafford.</p></div>
 </div>
 
