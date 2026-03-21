@@ -409,18 +409,44 @@
             <h3>Research across three continents</h3>
             <p style="text-align:center;font-size:0.8rem;color:var(--text-muted);margin-top:-0.5rem;margin-bottom:1.5rem;">Click a highlighted region to learn more</p>
             <div class="map-svg-wrap">
-                <!-- Real world map as background -->
-                <img src="https://upload.wikimedia.org/wikipedia/commons/1/13/Worldmap_northern.svg" alt="World map" style="width:100%;height:auto;opacity:0.18;display:block;">
+                <svg viewBox="0 0 1000 500" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block;">
+                    <!-- Ocean background -->
+                    <rect width="1000" height="500" fill="#e8f2ea" rx="8"/>
 
-                <!-- Invisible clickable overlay regions -->
-                <div class="map-hotspot" data-region="namerica" style="position:absolute;top:12%;left:5%;width:22%;height:38%;cursor:pointer;border-radius:8px;" title="North America"></div>
-                <div class="map-hotspot" data-region="europe" style="position:absolute;top:8%;left:42%;width:14%;height:22%;cursor:pointer;border-radius:8px;" title="Europe"></div>
-                <div class="map-hotspot" data-region="africa" style="position:absolute;top:30%;left:42%;width:16%;height:42%;cursor:pointer;border-radius:8px;" title="Africa"></div>
+                    <!-- Non-research landmasses (grey) -->
+                    <!-- South America -->
+                    <path d="M265,270 Q275,255 290,260 Q305,265 310,280 Q318,300 320,325 Q318,350 312,370 Q305,388 295,400 Q282,412 270,415 Q260,410 255,398 Q248,380 245,358 Q242,335 243,310 Q245,290 255,275 Z" fill="#c8d5cb"/>
+                    <!-- Central America -->
+                    <path d="M195,230 Q205,225 215,228 Q225,235 230,245 Q235,252 240,258 Q245,262 250,265 Q248,268 242,266 Q235,262 228,255 Q220,248 212,242 Q205,238 198,235 Z" fill="#c8d5cb"/>
+                    <!-- Asia -->
+                    <path d="M580,45 Q620,35 660,38 Q700,42 735,52 Q770,65 795,82 Q815,98 828,118 Q835,135 832,155 Q825,172 812,182 Q795,190 775,192 Q755,188 738,195 Q720,200 705,195 Q688,188 672,192 Q658,195 645,188 Q630,180 618,172 Q605,162 595,148 Q588,135 582,118 Q578,100 576,82 Q575,62 580,45 Z" fill="#c8d5cb"/>
+                    <!-- Middle East -->
+                    <path d="M558,130 Q568,125 578,128 Q588,135 592,145 Q590,155 585,162 Q578,168 570,165 Q562,158 558,148 Q555,140 558,130 Z" fill="#c8d5cb"/>
+                    <!-- India -->
+                    <path d="M650,160 Q660,155 670,158 Q680,165 685,178 Q688,195 685,212 Q680,225 672,235 Q662,240 655,235 Q648,225 645,212 Q642,198 643,182 Q645,170 650,160 Z" fill="#c8d5cb"/>
+                    <!-- Southeast Asia -->
+                    <path d="M740,195 Q752,190 762,195 Q770,202 772,212 Q768,220 760,222 Q750,218 745,210 Q740,202 740,195 Z" fill="#c8d5cb"/>
+                    <path d="M780,210 Q792,205 802,210 Q808,218 805,228 Q798,232 790,228 Q782,222 780,210 Z" fill="#c8d5cb"/>
+                    <!-- Australia -->
+                    <path d="M780,320 Q800,308 825,310 Q848,315 865,328 Q875,342 872,360 Q865,375 850,385 Q832,392 812,388 Q795,382 782,370 Q775,355 775,340 Q778,328 780,320 Z" fill="#c8d5cb"/>
+                    <!-- Greenland -->
+                    <path d="M340,28 Q358,22 375,28 Q388,38 390,52 Q385,65 375,72 Q362,75 348,70 Q338,62 335,48 Q336,35 340,28 Z" fill="#c8d5cb"/>
+                    <!-- Japan -->
+                    <path d="M840,90 Q845,82 850,85 Q854,92 852,100 Q848,108 843,105 Q839,98 840,90 Z" fill="#c8d5cb"/>
 
-                <!-- Visible highlight indicators -->
-                <div class="map-highlight" data-region="namerica" style="position:absolute;top:22%;left:10%;width:14%;height:20%;"></div>
-                <div class="map-highlight" data-region="europe" style="position:absolute;top:12%;left:44%;width:10%;height:14%;"></div>
-                <div class="map-highlight" data-region="africa" style="position:absolute;top:35%;left:44%;width:12%;height:32%;"></div>
+                    <!-- Research regions (coloured, clickable) -->
+                    <!-- North America -->
+                    <path d="M70,68 Q95,52 125,45 Q155,40 185,42 Q210,45 232,55 Q252,48 268,52 Q285,58 298,68 Q308,80 305,95 Q312,108 308,122 Q302,135 298,148 Q292,162 285,175 Q278,188 268,198 Q258,208 248,215 Q238,222 228,225 Q218,228 208,225 Q198,228 188,235 Q178,242 168,238 Q155,232 145,225 Q132,218 122,208 Q112,195 105,182 Q98,168 92,152 Q88,135 85,118 Q82,100 78,85 Z" class="map-region" id="map-namerica" data-region="namerica" style="cursor:pointer;"/>
+                    <!-- Europe -->
+                    <path d="M450,52 Q465,42 482,40 Q500,42 515,40 Q530,45 542,52 Q552,62 558,75 Q555,88 560,98 Q558,110 550,120 Q540,128 528,132 Q515,135 502,132 Q490,135 478,130 Q465,125 455,118 Q448,108 445,98 Q442,85 445,72 Q448,60 450,52 Z" class="map-region" id="map-europe" data-region="europe" style="cursor:pointer;"/>
+                    <!-- Africa -->
+                    <path d="M468,155 Q485,148 502,145 Q520,148 535,155 Q548,165 558,178 Q565,195 568,215 Q568,235 565,255 Q558,278 548,298 Q538,315 525,328 Q512,338 498,342 Q485,338 472,330 Q462,318 455,302 Q448,285 445,265 Q442,245 442,225 Q445,205 448,188 Q452,172 460,162 Z" class="map-region" id="map-africa" data-region="africa" style="cursor:pointer;"/>
+                </svg>
+
+                <!-- Invisible clickable overlay regions (larger hit areas) -->
+                <div class="map-hotspot" data-region="namerica" style="position:absolute;top:8%;left:5%;width:28%;height:42%;cursor:pointer;border-radius:8px;" title="North America"></div>
+                <div class="map-hotspot" data-region="europe" style="position:absolute;top:6%;left:42%;width:15%;height:22%;cursor:pointer;border-radius:8px;" title="Europe"></div>
+                <div class="map-hotspot" data-region="africa" style="position:absolute;top:28%;left:42%;width:16%;height:42%;cursor:pointer;border-radius:8px;" title="Africa"></div>
 
                 <!-- Tooltips -->
                 <div class="map-tooltip" id="tooltip-europe">
