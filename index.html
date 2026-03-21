@@ -408,46 +408,7 @@
         <div class="map-container reveal">
             <h3>Research across three continents</h3>
             <p style="text-align:center;font-size:0.8rem;color:var(--text-muted);margin-top:-0.5rem;margin-bottom:1.5rem;">Click a highlighted region to learn more</p>
-            <div class="map-svg-wrap">
-                <svg viewBox="0 0 1000 500" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block;">
-                    <!-- Ocean background -->
-                    <rect width="1000" height="500" fill="#e8f2ea" rx="8"/>
-
-                    <!-- Non-research landmasses (grey) -->
-                    <!-- South America -->
-                    <path d="M265,270 Q275,255 290,260 Q305,265 310,280 Q318,300 320,325 Q318,350 312,370 Q305,388 295,400 Q282,412 270,415 Q260,410 255,398 Q248,380 245,358 Q242,335 243,310 Q245,290 255,275 Z" fill="#c8d5cb"/>
-                    <!-- Central America -->
-                    <path d="M195,230 Q205,225 215,228 Q225,235 230,245 Q235,252 240,258 Q245,262 250,265 Q248,268 242,266 Q235,262 228,255 Q220,248 212,242 Q205,238 198,235 Z" fill="#c8d5cb"/>
-                    <!-- Asia -->
-                    <path d="M580,45 Q620,35 660,38 Q700,42 735,52 Q770,65 795,82 Q815,98 828,118 Q835,135 832,155 Q825,172 812,182 Q795,190 775,192 Q755,188 738,195 Q720,200 705,195 Q688,188 672,192 Q658,195 645,188 Q630,180 618,172 Q605,162 595,148 Q588,135 582,118 Q578,100 576,82 Q575,62 580,45 Z" fill="#c8d5cb"/>
-                    <!-- Middle East -->
-                    <path d="M558,130 Q568,125 578,128 Q588,135 592,145 Q590,155 585,162 Q578,168 570,165 Q562,158 558,148 Q555,140 558,130 Z" fill="#c8d5cb"/>
-                    <!-- India -->
-                    <path d="M650,160 Q660,155 670,158 Q680,165 685,178 Q688,195 685,212 Q680,225 672,235 Q662,240 655,235 Q648,225 645,212 Q642,198 643,182 Q645,170 650,160 Z" fill="#c8d5cb"/>
-                    <!-- Southeast Asia -->
-                    <path d="M740,195 Q752,190 762,195 Q770,202 772,212 Q768,220 760,222 Q750,218 745,210 Q740,202 740,195 Z" fill="#c8d5cb"/>
-                    <path d="M780,210 Q792,205 802,210 Q808,218 805,228 Q798,232 790,228 Q782,222 780,210 Z" fill="#c8d5cb"/>
-                    <!-- Australia -->
-                    <path d="M780,320 Q800,308 825,310 Q848,315 865,328 Q875,342 872,360 Q865,375 850,385 Q832,392 812,388 Q795,382 782,370 Q775,355 775,340 Q778,328 780,320 Z" fill="#c8d5cb"/>
-                    <!-- Greenland -->
-                    <path d="M340,28 Q358,22 375,28 Q388,38 390,52 Q385,65 375,72 Q362,75 348,70 Q338,62 335,48 Q336,35 340,28 Z" fill="#c8d5cb"/>
-                    <!-- Japan -->
-                    <path d="M840,90 Q845,82 850,85 Q854,92 852,100 Q848,108 843,105 Q839,98 840,90 Z" fill="#c8d5cb"/>
-
-                    <!-- Research regions (coloured, clickable) -->
-                    <!-- North America -->
-                    <path d="M70,68 Q95,52 125,45 Q155,40 185,42 Q210,45 232,55 Q252,48 268,52 Q285,58 298,68 Q308,80 305,95 Q312,108 308,122 Q302,135 298,148 Q292,162 285,175 Q278,188 268,198 Q258,208 248,215 Q238,222 228,225 Q218,228 208,225 Q198,228 188,235 Q178,242 168,238 Q155,232 145,225 Q132,218 122,208 Q112,195 105,182 Q98,168 92,152 Q88,135 85,118 Q82,100 78,85 Z" class="map-region" id="map-namerica" data-region="namerica" style="cursor:pointer;"/>
-                    <!-- Europe -->
-                    <path d="M450,52 Q465,42 482,40 Q500,42 515,40 Q530,45 542,52 Q552,62 558,75 Q555,88 560,98 Q558,110 550,120 Q540,128 528,132 Q515,135 502,132 Q490,135 478,130 Q465,125 455,118 Q448,108 445,98 Q442,85 445,72 Q448,60 450,52 Z" class="map-region" id="map-europe" data-region="europe" style="cursor:pointer;"/>
-                    <!-- Africa -->
-                    <path d="M468,155 Q485,148 502,145 Q520,148 535,155 Q548,165 558,178 Q565,195 568,215 Q568,235 565,255 Q558,278 548,298 Q538,315 525,328 Q512,338 498,342 Q485,338 472,330 Q462,318 455,302 Q448,285 445,265 Q442,245 442,225 Q445,205 448,188 Q452,172 460,162 Z" class="map-region" id="map-africa" data-region="africa" style="cursor:pointer;"/>
-                </svg>
-
-                <!-- Invisible clickable overlay regions (larger hit areas) -->
-                <div class="map-hotspot" data-region="namerica" style="position:absolute;top:8%;left:5%;width:28%;height:42%;cursor:pointer;border-radius:8px;" title="North America"></div>
-                <div class="map-hotspot" data-region="europe" style="position:absolute;top:6%;left:42%;width:15%;height:22%;cursor:pointer;border-radius:8px;" title="Europe"></div>
-                <div class="map-hotspot" data-region="africa" style="position:absolute;top:28%;left:42%;width:16%;height:42%;cursor:pointer;border-radius:8px;" title="Africa"></div>
-
+            <div class="map-svg-wrap" id="world-map">
                 <!-- Tooltips -->
                 <div class="map-tooltip" id="tooltip-europe">
                     <button class="map-tooltip-close" onclick="hideTooltip('europe')">&times;</button>
@@ -726,22 +687,111 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
     });
 });
 
-// Map interactivity
+// Map - render real world map with D3
+const mapScript = document.createElement('script');
+mapScript.src = 'https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js';
+mapScript.onload = () => {
+    const topoScript = document.createElement('script');
+    topoScript.src = 'https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js';
+    topoScript.onload = () => {
+        fetch('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json')
+            .then(r => r.json())
+            .then(world => {
+                const container = document.getElementById('world-map');
+                const width = container.offsetWidth;
+                const height = width * 0.5;
+
+                const svg = d3.select('#world-map')
+                    .insert('svg', ':first-child')
+                    .attr('width', width)
+                    .attr('height', height)
+                    .attr('viewBox', `0 0 ${width} ${height}`)
+                    .style('display', 'block');
+
+                const projection = d3.geoNaturalEarth1()
+                    .fitSize([width, height], topojson.feature(world, world.objects.countries));
+
+                const path = d3.geoPath().projection(projection);
+                const countries = topojson.feature(world, world.objects.countries).features;
+
+                // Region mapping by country ID (UN M49 codes)
+                const northAmerica = ['124','840','484']; // Canada, USA, Mexico
+                const europe = ['826','250','276','724','620','380','56','528','40','756','208','752','578','246','372','616','203','703','348','642','100','191','705','470','352','233','428','440','804'];
+                const africa = ['12','24','204','72','854','108','120','132','140','148','174','178','180','384','262','818','226','232','231','266','270','288','324','624','404','426','430','434','450','454','466','478','480','504','508','516','562','566','646','678','686','694','706','710','728','729','748','768','788','800','834','894','716'];
+
+                function getRegion(id) {
+                    if (northAmerica.includes(id)) return 'namerica';
+                    if (europe.includes(id)) return 'europe';
+                    if (africa.includes(id)) return 'africa';
+                    return null;
+                }
+
+                svg.selectAll('path')
+                    .data(countries)
+                    .enter()
+                    .append('path')
+                    .attr('d', path)
+                    .attr('fill', d => {
+                        const region = getRegion(d.id);
+                        return region ? '#7aab88' : '#c8d5cb';
+                    })
+                    .attr('stroke', '#e8f2ea')
+                    .attr('stroke-width', 0.5)
+                    .attr('opacity', d => getRegion(d.id) ? 0.6 : 0.35)
+                    .style('cursor', d => getRegion(d.id) ? 'pointer' : 'default')
+                    .on('mouseenter', function(event, d) {
+                        const region = getRegion(d.id);
+                        if (region) {
+                            svg.selectAll('path')
+                                .filter(dd => getRegion(dd.id) === region)
+                                .transition().duration(200)
+                                .attr('fill', '#3a6b4a')
+                                .attr('opacity', 0.8);
+                        }
+                    })
+                    .on('mouseleave', function(event, d) {
+                        const region = getRegion(d.id);
+                        if (region && activeRegion !== region) {
+                            svg.selectAll('path')
+                                .filter(dd => getRegion(dd.id) === region)
+                                .transition().duration(200)
+                                .attr('fill', '#7aab88')
+                                .attr('opacity', 0.6);
+                        }
+                    })
+                    .on('click', function(event, d) {
+                        const region = getRegion(d.id);
+                        if (region) {
+                            event.stopPropagation();
+                            showTooltip(region);
+                            // Darken active region
+                            svg.selectAll('path').each(function(dd) {
+                                const r = getRegion(dd.id);
+                                d3.select(this)
+                                    .transition().duration(200)
+                                    .attr('fill', r === region ? '#3a6b4a' : (r ? '#7aab88' : '#c8d5cb'))
+                                    .attr('opacity', r === region ? 0.8 : (r ? 0.6 : 0.35));
+                            });
+                        }
+                    });
+            });
+    };
+    document.head.appendChild(topoScript);
+};
+document.head.appendChild(mapScript);
+
+// Map tooltip logic
 let activeRegion = null;
 
 function showTooltip(region) {
     document.querySelectorAll('.map-tooltip').forEach(t => t.classList.remove('show'));
-    document.querySelectorAll('.map-hotspot').forEach(r => r.classList.remove('active'));
-
     if (activeRegion === region) { activeRegion = null; return; }
 
     const tooltip = document.getElementById('tooltip-' + region);
-    document.querySelectorAll('.map-hotspot[data-region="'+region+'"]').forEach(r => r.classList.add('active'));
-
     const positions = {
         europe: { top: '5%', left: '58%' },
-        africa: { top: '30%', left: '60%' },
-        namerica: { top: '15%', left: '22%' }
+        africa: { top: '25%', left: '62%' },
+        namerica: { top: '10%', left: '22%' }
     };
     const pos = positions[region] || { top: '20%', left: '30%' };
     tooltip.style.top = pos.top;
@@ -752,21 +802,21 @@ function showTooltip(region) {
 
 function hideTooltip(region) {
     document.getElementById('tooltip-' + region).classList.remove('show');
-    document.querySelectorAll('.map-hotspot[data-region="'+region+'"]').forEach(r => r.classList.remove('active'));
     activeRegion = null;
+    // Reset all research regions
+    if (typeof d3 !== 'undefined') {
+        d3.select('#world-map svg').selectAll('path').each(function(d) {
+            const r = d && d.id ? (['124','840','484'].includes(d.id) ? 'namerica' : ['826','250','276','724','620','380','56','528','40','756','208','752','578','246','372','616','203','703','348','642','100','191','705','470','352','233','428','440','804'].includes(d.id) ? 'europe' : null) : null;
+            d3.select(this).transition().duration(200)
+                .attr('fill', r ? '#7aab88' : '#c8d5cb')
+                .attr('opacity', r ? 0.6 : 0.35);
+        });
+    }
 }
-
-document.querySelectorAll('.map-hotspot').forEach(el => {
-    el.addEventListener('click', (e) => {
-        e.stopPropagation();
-        showTooltip(el.dataset.region);
-    });
-});
 
 document.addEventListener('click', (e) => {
     if (!e.target.closest('.map-svg-wrap')) {
         document.querySelectorAll('.map-tooltip').forEach(t => t.classList.remove('show'));
-        document.querySelectorAll('.map-hotspot').forEach(r => r.classList.remove('active'));
         activeRegion = null;
     }
 });
