@@ -400,46 +400,50 @@
         <div class="map-container reveal">
             <h3>Research across three continents</h3>
             <div class="map-svg-wrap">
-                <!-- Simplified world map with research regions -->
-                <svg viewBox="0 0 900 450" xmlns="http://www.w3.org/2000/svg">
-                    <!-- Background landmasses (simplified) -->
+                <svg viewBox="0 0 1000 500" xmlns="http://www.w3.org/2000/svg">
+                    <!-- World map continents -->
                     <!-- North America -->
-                    <path class="map-land" d="M80,60 L180,40 L260,50 L280,80 L300,70 L310,100 L290,140 L300,170 L280,200 L260,220 L230,240 L200,230 L170,250 L150,240 L130,200 L100,180 L90,140 L70,110 Z"/>
+                    <path class="map-land" d="M135,95 L150,85 L175,80 L195,75 L220,72 L240,78 L255,70 L270,75 L280,68 L295,72 L305,80 L295,90 L300,100 L290,110 L295,125 L285,135 L280,150 L270,160 L260,170 L255,180 L248,190 L240,195 L230,200 L220,205 L210,198 L200,205 L190,215 L180,225 L170,220 L160,210 L150,215 L140,210 L130,200 L125,190 L118,180 L110,170 L105,155 L100,140 L105,125 L110,110 L120,100 Z"/>
+                    <path id="map-namerica" class="map-region" d="M135,95 L150,85 L175,80 L195,75 L220,72 L240,78 L255,70 L270,75 L280,68 L295,72 L305,80 L295,90 L300,100 L290,110 L295,125 L285,135 L280,150 L270,160 L260,170 L255,180 L248,190 L240,195 L230,200 L220,205 L210,198 L200,205 L190,215 L180,225 L170,220 L160,210 L150,215 L140,210 L130,200 L125,190 L118,180 L110,170 L105,155 L100,140 L105,125 L110,110 L120,100 Z" data-region="namerica"/>
+                    <!-- Central America -->
+                    <path class="map-land" d="M180,225 L190,230 L195,240 L200,250 L210,255 L215,260 L210,265 L200,260 L195,255 L185,250 L175,240 L170,230 Z"/>
                     <!-- South America -->
-                    <path class="map-land" d="M200,260 L230,250 L260,270 L270,310 L260,350 L240,380 L220,400 L200,390 L190,350 L180,310 L190,280 Z"/>
+                    <path class="map-land" d="M210,265 L225,260 L240,265 L255,275 L265,290 L270,310 L268,330 L265,350 L258,370 L248,385 L238,395 L228,400 L220,395 L215,385 L210,370 L205,350 L200,330 L198,310 L200,290 L205,275 Z"/>
                     <!-- Europe -->
-                    <path class="map-land" d="M420,60 L460,50 L500,55 L520,70 L510,90 L530,100 L520,120 L500,130 L480,125 L460,130 L440,120 L430,100 L420,80 Z"/>
+                    <path class="map-land" d="M460,65 L470,58 L485,55 L500,58 L515,55 L530,60 L540,68 L535,78 L545,85 L540,95 L535,105 L525,110 L515,115 L505,118 L495,115 L485,118 L475,112 L465,108 L458,100 L455,90 L458,78 Z"/>
+                    <path id="map-europe" class="map-region" d="M460,65 L470,58 L485,55 L500,58 L515,55 L530,60 L540,68 L535,78 L545,85 L540,95 L535,105 L525,110 L515,115 L505,118 L495,115 L485,118 L475,112 L465,108 L458,100 L455,90 L458,78 Z" data-region="europe"/>
                     <!-- Africa -->
-                    <path class="map-land" d="M440,150 L480,140 L520,150 L540,180 L550,220 L540,270 L520,310 L500,340 L480,350 L460,340 L440,310 L430,270 L440,220 L430,180 Z"/>
+                    <path class="map-land" d="M470,140 L485,135 L500,132 L515,135 L530,140 L545,150 L555,165 L560,185 L562,205 L558,225 L552,245 L545,265 L535,285 L525,300 L515,310 L505,315 L495,318 L485,315 L475,308 L468,295 L462,280 L458,260 L455,240 L453,220 L455,200 L458,180 L462,160 L465,148 Z"/>
+                    <path id="map-africa" class="map-region" d="M470,140 L485,135 L500,132 L515,135 L530,140 L545,150 L555,165 L560,185 L562,205 L558,225 L552,245 L545,265 L535,285 L525,300 L515,310 L505,315 L495,318 L485,315 L475,308 L468,295 L462,280 L458,260 L455,240 L453,220 L455,200 L458,180 L462,160 L465,148 Z" data-region="africa"/>
                     <!-- Asia -->
-                    <path class="map-land" d="M540,50 L620,40 L700,50 L760,70 L800,100 L810,140 L790,170 L750,180 L700,170 L660,180 L620,160 L580,150 L560,120 L540,100 L530,70 Z"/>
+                    <path class="map-land" d="M550,55 L580,48 L620,42 L660,45 L700,50 L740,55 L775,65 L800,80 L820,100 L830,120 L825,140 L815,155 L800,165 L780,170 L760,172 L740,168 L720,170 L700,165 L680,170 L660,165 L640,158 L620,155 L600,148 L580,140 L565,130 L555,115 L548,100 L545,85 L548,70 Z"/>
+                    <!-- Middle East connection -->
+                    <path class="map-land" d="M555,115 L565,120 L575,130 L570,140 L562,148 L555,145 L548,135 L545,125 Z"/>
+                    <!-- Southeast Asia / Indonesia -->
+                    <path class="map-land" d="M720,190 L740,185 L760,190 L775,195 L780,205 L770,210 L755,208 L740,205 L725,200 Z"/>
+                    <path class="map-land" d="M790,195 L810,192 L825,198 L830,208 L820,215 L805,210 L795,205 Z"/>
                     <!-- Australia -->
-                    <path class="map-land" d="M720,290 L770,280 L810,290 L820,320 L800,350 L760,360 L730,340 L720,310 Z"/>
-
-                    <!-- Research regions (interactive) -->
-                    <!-- Europe highlight -->
-                    <path id="map-europe" class="map-region" d="M420,60 L460,50 L500,55 L520,70 L510,90 L530,100 L520,120 L500,130 L480,125 L460,130 L440,120 L430,100 L420,80 Z" data-region="europe"/>
-                    <!-- Africa highlight -->
-                    <path id="map-africa" class="map-region" d="M440,150 L480,140 L520,150 L540,180 L550,220 L540,270 L520,310 L500,340 L480,350 L460,340 L440,310 L430,270 L440,220 L430,180 Z" data-region="africa"/>
-                    <!-- North America highlight -->
-                    <path id="map-namerica" class="map-region" d="M80,60 L180,40 L260,50 L280,80 L300,70 L310,100 L290,140 L300,170 L280,200 L260,220 L230,240 L200,230 L170,250 L150,240 L130,200 L100,180 L90,140 L70,110 Z" data-region="namerica"/>
-
-                    <!-- Research location dots -->
-                    <circle cx="460" cy="90" r="4" class="map-dot" data-region="europe"/><!-- UK -->
-                    <circle cx="490" cy="210" r="4" class="map-dot" data-region="africa"/><!-- East Africa -->
-                    <circle cx="460" cy="240" r="4" class="map-dot" data-region="africa"/><!-- Sierra Leone -->
-                    <circle cx="210" cy="175" r="4" class="map-dot" data-region="namerica"/><!-- Arizona -->
-                    <circle cx="220" cy="150" r="4" class="map-dot" data-region="namerica"/><!-- Colorado -->
+                    <path class="map-land" d="M770,290 L795,278 L820,280 L845,288 L858,300 L860,320 L852,340 L838,355 L818,362 L798,358 L778,348 L768,332 L762,315 L765,300 Z"/>
+                    <!-- Greenland -->
+                    <path class="map-land" d="M320,30 L345,25 L365,30 L375,42 L370,55 L358,62 L342,60 L328,55 L320,45 Z"/>
+                    <!-- UK/Ireland (small) -->
+                    <path class="map-land" d="M452,72 L458,68 L462,72 L460,78 L455,80 L450,76 Z"/>
+                    <!-- Japan -->
+                    <path class="map-land" d="M828,95 L832,85 L838,80 L842,88 L840,98 L835,105 L830,102 Z"/>
+                    <!-- New Zealand -->
+                    <path class="map-land" d="M878,355 L882,348 L886,352 L884,360 L880,362 Z"/>
+                    <path class="map-land" d="M872,365 L876,360 L880,365 L876,372 L872,370 Z"/>
 
                     <!-- Labels -->
-                    <text x="440" y="48" font-family="Lexend" font-size="10" font-weight="500" fill="#3a6b4a" opacity="0.6">EUROPE</text>
-                    <text x="450" cy="170" y="170" font-family="Lexend" font-size="10" font-weight="500" fill="#3a6b4a" opacity="0.6">AFRICA</text>
-                    <text x="150" y="115" font-family="Lexend" font-size="10" font-weight="500" fill="#3a6b4a" opacity="0.6">NORTH AMERICA</text>
+                    <text x="170" y="140" font-family="Lexend" font-size="11" font-weight="400" fill="#3a6b4a" opacity="0.5">NORTH AMERICA</text>
+                    <text x="470" y="52" font-family="Lexend" font-size="11" font-weight="400" fill="#3a6b4a" opacity="0.5">EUROPE</text>
+                    <text x="485" y="225" font-family="Lexend" font-size="11" font-weight="400" fill="#3a6b4a" opacity="0.5">AFRICA</text>
                 </svg>
 
                 <!-- Tooltips -->
                 <div class="map-tooltip" id="tooltip-europe">
                     <button class="map-tooltip-close" onclick="hideTooltip('europe')">&times;</button>
+                    <img src="GB.jpg" alt="Agrivoltaic research in Great Britain">
                     <h4>Great Britain</h4>
                     <p>Spatial suitability analysis for agrivoltaics across Great Britain, identifying where solar-agriculture integration could alleviate land use conflicts while supporting high-grade farmland. Published in Applied Energy.</p>
                 </div>
@@ -452,7 +456,7 @@
                 </div>
                 <div class="map-tooltip" id="tooltip-namerica">
                     <button class="map-tooltip-close" onclick="hideTooltip('namerica')">&times;</button>
-                    <img src="Colorado-licor.jpg" alt="Fieldwork in Colorado">
+                    <img src="JSG_2025_Potatoes.jpg" alt="Potato harvest at an agrivoltaic farm">
                     <h4>American Southwest &amp; Colorado</h4>
                     <p>PhD dissertation research: spatial suitability modeling through 2080, farmworker heat stress measurement and interviews, and crop nutrient analysis across agrivoltaic field sites in Arizona and Colorado.</p>
                 </div>
@@ -460,7 +464,7 @@
         </div>
     </section>
 </div>
-
+    
 <!-- PHD RESEARCH -->
 <div class="section-wrap green-dark">
     <section id="research" class="section">
