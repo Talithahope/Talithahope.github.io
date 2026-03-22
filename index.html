@@ -422,9 +422,15 @@
                 <div class="map-tooltip" id="tooltip-africa">
                     <button class="map-tooltip-close" onclick="hideTooltip('africa')">&times;</button>
                     <img src="https://talithahope.github.io/AV_Tanzania_Img1.jpg" alt="Fieldwork in East Africa">
-                    <h4>East Africa &amp; Sierra Leone</h4>
-                    <p>Agrivoltaic suitability modeling with the World Agroforestry Center, and research on farmers' perceptions of and adaptation to climate change in Sierra Leone.</p>
+                    <h4>East Africa</h4>
+                    <p>Agrivoltaic suitability modeling with the World Agroforestry Center, identifying where solar-agriculture integration could support smallholder farming systems across the region.</p>
                     <a href="https://talithahope.github.io/Agrivoltaics_suitability_East_Africa/" target="_blank">View interactive GIS project &rarr;</a>
+                </div>
+                <div class="map-tooltip" id="tooltip-sierraleone">
+                    <button class="map-tooltip-close" onclick="hideTooltip('sierraleone')">&times;</button>
+                    <img src="Bombali-farm.jpg" alt="Raised crop bed with peppers and mulch in Bombali, Sierra Leone">
+                    <h4>Sierra Leone</h4>
+                    <p>Mixed-methods research exploring farmworkers' perceptions of and adaptation to climate change in Bombali, documenting on-farm strategies, and comparing experiences with observed climate data to identify where local knowledge and meteorological records align and diverge.</p>
                 </div>
                 <div class="map-tooltip" id="tooltip-namerica">
                     <button class="map-tooltip-close" onclick="hideTooltip('namerica')">&times;</button>
@@ -556,11 +562,19 @@
                 </div>
             </div>
             <div class="fieldwork-card reveal">
-                <img src="AV_Colorado_Img2.jpg" alt="Tomatos in containers on the ground harvested by farmworkers in an agrivoltaic system" class="fieldwork-img">
+                <img src="AV_Colorado_Img2.jpg" alt="Tomatoes in containers on the ground harvested by farmworkers in an agrivoltaic system" class="fieldwork-img">
                 <div class="fieldwork-body">
                     <div class="fieldwork-location">Longmont, Colorado</div>
                     <h3>Farmworker interviews</h3>
                     <p>In-depth semi-structured interviews with farmworkers on agrivoltaic and conventional farms, understanding how they experience heat, shade, and working conditions across the season.</p>
+                </div>
+            </div>
+            <div class="fieldwork-card reveal">
+                <img src="Bombali-farm.jpg" alt="Raised crop bed with peppers and mulch on a farm in Bombali" class="fieldwork-img">
+                <div class="fieldwork-body">
+                    <div class="fieldwork-location">Bombali, Sierra Leone</div>
+                    <h3>Climate adaptation perceptions</h3>
+                    <p>Interviewing farmworkers about their perceptions of and adaptation to climate change, documenting on-farm strategies, and comparing experiences with observed climate data to identify where local knowledge and meteorological records align and diverge.</p>
                 </div>
             </div>
         </div>
@@ -726,7 +740,7 @@ mapScript.onload = () => {
                     if (usa.includes(id)) return 'namerica';
                     if (uk.includes(id)) return 'europe';
                     if (eastAfrica.includes(id)) return 'africa';
-                    if (sierraLeone.includes(id)) return 'africa';
+                    if (sierraLeone.includes(id)) return 'sierraleone';
                     return null;
                 }
 
@@ -795,6 +809,7 @@ function showTooltip(region) {
     const positions = {
         europe: { top: '5%', left: '58%' },
         africa: { top: '25%', left: '62%' },
+        sierraleone: { top: '40%', left: '42%' },
         namerica: { top: '10%', left: '22%' }
     };
     const pos = positions[region] || { top: '20%', left: '30%' };
