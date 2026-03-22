@@ -139,7 +139,7 @@
             background: var(--meadow);
             border-radius: 14px;
             padding: 2rem;
-            overflow: hidden;
+            overflow: visible;  /* was: hidden */
         }
         .map-container h3 {
             font-size: 1.1rem; font-weight: 500; margin-bottom: 1rem;
@@ -822,10 +822,10 @@ function showTooltip(region) {
 function hideTooltip(region) {
     document.getElementById('tooltip-' + region).classList.remove('show');
     activeRegion = null;
-    // Reset all research regions
+    // Reset all research regions using the same getRegion logic
     if (typeof d3 !== 'undefined') {
         d3.select('#world-map svg').selectAll('path').each(function(d) {
-            const r = d && d.id ? (['124','840','484'].includes(d.id) ? 'namerica' : ['826','250','276','724','620','380','56','528','40','756','208','752','578','246','372','616','203','703','348','642','100','191','705','470','352','233','428','440','804'].includes(d.id) ? 'europe' : null) : null;
+            const r = d && d.id ? getRegion(d.id) : null;
             d3.select(this).transition().duration(200)
                 .attr('fill', r ? '#7aab88' : '#c8d5cb')
                 .attr('opacity', r ? 0.6 : 0.35);
