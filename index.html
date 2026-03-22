@@ -718,13 +718,15 @@ mapScript.onload = () => {
                 const countries = topojson.feature(world, world.objects.countries).features;
 
                 // Region mapping by country ID (UN M49 codes)
-                const northAmerica = ['124','840','484']; // Canada, USA, Mexico
-                const europe = ['826','250','276','724','620','380','56','528','40','756','208','752','578','246','372','616','203','703','348','642','100','191','705','470','352','233','428','440','804'];
-               const africa = ['12','24','204','72','854','108','120','132','140','148','174','178','180','384','262','818','226','232','231','266','270','288','324','624','404','426','430','434','450','454','466','478','480','504','508','516','562','566','646','678','686','694','706','710','728','729','748','768','788','800','834','894','716','732','736','426','748','174','480','175','638','659'];
+                const usa = ['840'];
+                const uk = ['826'];
+                const eastAfrica = ['834','404','646','108','729','800','728','706','231','262','232']; // Tanzania, Kenya, Rwanda, Burundi, Sudan, Uganda, South Sudan, Somalia, Ethiopia, Djibouti, Eritrea
+                const sierraLeone = ['694'];
                 function getRegion(id) {
-                    if (northAmerica.includes(id)) return 'namerica';
-                    if (europe.includes(id)) return 'europe';
-                    if (africa.includes(id)) return 'africa';
+                    if (usa.includes(id)) return 'usa';
+                    if (uk.includes(id)) return 'uk';
+                    if (eastAfrica.includes(id)) return 'eastafrica';
+                    if (sierraLeone.includes(id)) return 'sierraleone';
                     return null;
                 }
 
