@@ -30,8 +30,6 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         html { scroll-behavior: smooth; }
         body { font-family: 'Lexend', sans-serif; font-weight: 300; color: var(--text); background: var(--cream); line-height: 1.7; overflow-x: hidden; }
-
-        /* NAV */
         header { position: fixed; top: 0; width: 100%; z-index: 1000; padding: 1rem 0; transition: all 0.4s; }
         header.scrolled { background: rgba(250,249,246,0.96); backdrop-filter: blur(20px); box-shadow: 0 1px 0 rgba(46,66,56,0.06); }
         nav { max-width: 1200px; margin: 0 auto; padding: 0 2rem; display: flex; justify-content: space-between; align-items: center; }
@@ -44,8 +42,6 @@
         .menu-toggle { display: none; background: none; border: none; cursor: pointer; padding: 0.5rem; }
         .menu-toggle span { display: block; width: 22px; height: 2px; background: white; margin: 5px 0; transition: all 0.3s; }
         header.scrolled .menu-toggle span { background: var(--fern-deep); }
-
-        /* HERO */
         .hero { min-height: 100vh; display: flex; align-items: center; position: relative; background: linear-gradient(170deg, var(--fern-dark) 0%, var(--fern) 45%, var(--moss) 100%); overflow: hidden; }
         .hero::before { content: ''; position: absolute; top: -20%; right: -10%; width: 60vw; height: 60vw; border-radius: 50%; background: radial-gradient(circle, rgba(159,197,168,0.2) 0%, transparent 70%); pointer-events: none; }
         .mountain-bg { position: absolute; bottom: 0; left: 0; width: 100%; height: 40vh; pointer-events: none; }
@@ -61,14 +57,11 @@
         .hero-image-wrapper img { width: 100%; max-width: 380px; border-radius: 16px; display: block; margin: 0 auto; box-shadow: 0 30px 70px rgba(0,0,0,0.25); object-fit: cover; }
         .scroll-indicator { position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%); color: rgba(255,255,255,0.4); font-size: 0.62rem; letter-spacing: 0.15em; text-transform: uppercase; display: flex; flex-direction: column; align-items: center; gap: 0.5rem; animation: bob 2s ease-in-out infinite; z-index: 3; }
         .scroll-indicator svg { width: 16px; height: 16px; stroke: rgba(255,255,255,0.4); }
-
-        /* SHARED */
         .section-wrap { position: relative; overflow: hidden; }
         .section { padding: 5.5rem 2rem; max-width: 1200px; margin: 0 auto; position: relative; z-index: 2; }
         .section-label { font-size: 0.7rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 0.5rem; }
         .section h2 { font-size: clamp(1.7rem, 2.8vw, 2.4rem); font-weight: 400; margin-bottom: 1rem; letter-spacing: -0.01em; line-height: 1.2; }
         .section-intro { font-size: 0.95rem; max-width: 580px; margin-bottom: 2.5rem; }
-
         .green-light { background: var(--meadow-light); }
         .green-light .section-label { color: var(--fern); }
         .green-light .section-intro { color: var(--text-muted); }
@@ -82,32 +75,13 @@
         .blossom-warm { background: linear-gradient(160deg, var(--blossom-bg) 0%, #fef5f0 50%, #fdf8f2 100%); }
         .blossom-warm .section-label { color: var(--petal); }
         .blossom-warm .section-intro { color: var(--text-muted); }
-
         .transition-divider { height: 4px; background: linear-gradient(90deg, var(--sage) 0%, var(--blossom-soft) 100%); opacity: 0.4; }
-
-        /* Background image sections */
-        .bg-photo {
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-        }
-        .bg-photo-pubs {
-            background-image: linear-gradient(rgba(254,248,250,0.88), rgba(254,245,240,0.9)), url('AV_Japan_Img3.jpg');
-        }
-        .bg-photo-group {
-            background-image: linear-gradient(rgba(232,242,234,0.85), rgba(232,242,234,0.9)), url('https://talithahope.github.io/AV_B2_img2.jpg');
-        }
-        .bg-photo-about {
-            background-image: linear-gradient(rgba(242,248,243,0.92), rgba(242,248,243,0.88)), url('https://talithahope.github.io/AV_Tanzania_Img1.jpg');
-        }
-        .bg-photo-map {
-            background-image: linear-gradient(rgba(242,248,243,0.88), rgba(242,248,243,0.92)), url('https://talithahope.github.io/AV_B2_img2.jpg');
-        }
-        @media (max-width: 900px) {
-            .bg-photo { background-attachment: scroll; }
-        }
-
-        /* ABOUT */
+        .bg-photo { background-size: cover; background-position: center; background-attachment: fixed; }
+        .bg-photo-pubs { background-image: linear-gradient(rgba(254,248,250,0.88), rgba(254,245,240,0.9)), url('AV_Japan_Img3.jpg'); }
+        .bg-photo-group { background-image: linear-gradient(rgba(232,242,234,0.85), rgba(232,242,234,0.9)), url('https://talithahope.github.io/AV_B2_img2.jpg'); }
+        .bg-photo-about { background-image: linear-gradient(rgba(242,248,243,0.92), rgba(242,248,243,0.88)), url('https://talithahope.github.io/AV_Tanzania_Img1.jpg'); }
+        .bg-photo-map { background-image: linear-gradient(rgba(242,248,243,0.88), rgba(242,248,243,0.92)), url('https://talithahope.github.io/AV_B2_img2.jpg'); }
+        @media (max-width: 900px) { .bg-photo { background-attachment: scroll; } }
         .about-grid { display: grid; grid-template-columns: 1fr 1.3fr; gap: 3.5rem; align-items: start; }
         .about-image-col { position: sticky; top: 120px; }
         .about-image-col img { width: 100%; max-width: 340px; border-radius: 14px; box-shadow: 0 14px 45px rgba(42,77,54,0.1); }
@@ -117,11 +91,7 @@
         .tag:hover { background: #e8d17a; color: #4a4010; border-color: #e8d17a; }
         .tag.pink { border-color: var(--blossom); color: var(--petal); }
         .tag.pink:hover { background: var(--petal); color: white; border-color: var(--petal); }
-
-        /* LAKE DISTRICT */
         .lake-banner { width: 100%; max-height: 280px; object-fit: cover; display: block; }
-
-        /* JOURNEY */
         .journey-timeline { position: relative; padding-left: 2.5rem; margin-top: 1.5rem; }
         .journey-timeline::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 2px; background: var(--fern); opacity: 0.25; }
         .journey-stop { position: relative; padding-bottom: 2.2rem; opacity: 0; transform: translateX(-12px); transition: all 0.6s ease; }
@@ -131,80 +101,22 @@
         .journey-location { font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--fern); margin-bottom: 0.2rem; font-weight: 500; }
         .journey-title { font-size: 1.15rem; font-weight: 500; margin-bottom: 0.3rem; }
         .journey-desc { color: var(--text-muted); font-size: 0.88rem; }
-
-       /* RESEARCH MAP */
-        .map-container {
-            position: relative;
-            margin: 3rem 0 1rem;
-            background: var(--meadow);
-            border-radius: 14px;
-            padding: 2rem;
-            overflow: visible;  /* was: hidden */
-        }
-        .map-container h3 {
-            font-size: 1.1rem; font-weight: 500; margin-bottom: 1rem;
-            text-align: center; color: var(--fern-deep);
-        }
-        .map-svg-wrap {
-            max-width: 800px;
-            margin: 0 auto;
-            position: relative;
-        }
-        .map-hotspot {
-            transition: background 0.3s ease;
-        }
-        .map-hotspot:hover {
-            background: rgba(94,138,107,0.08);
-        }
-        .map-hotspot.active {
-            background: rgba(94,138,107,0.12);
-        }
-        .map-highlight {
-            background: rgba(94,138,107,0.15);
-            border: 2px solid rgba(94,138,107,0.25);
-            border-radius: 50%;
-            pointer-events: none;
-            transition: all 0.3s ease;
-        }
-        .map-tooltip {
-            position: absolute;
-            background: var(--white);
-            border-radius: 12px;
-            padding: 1.2rem;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.12);
-            width: 280px;
-            z-index: 10;
-            opacity: 0;
-            pointer-events: none;
-            transition: opacity 0.3s ease;
-            border: 1px solid rgba(94,138,107,0.1);
-        }
+        .map-container { position: relative; margin: 3rem 0 1rem; background: var(--meadow); border-radius: 14px; padding: 2rem; overflow: visible; }
+        .map-container h3 { font-size: 1.1rem; font-weight: 500; margin-bottom: 1rem; text-align: center; color: var(--fern-deep); }
+        .map-svg-wrap { max-width: 800px; margin: 0 auto; position: relative; }
+        .map-tooltip { position: absolute; background: var(--white); border-radius: 12px; padding: 1.2rem; box-shadow: 0 10px 40px rgba(0,0,0,0.12); width: 280px; z-index: 10; opacity: 0; pointer-events: none; transition: opacity 0.3s ease; border: 1px solid rgba(94,138,107,0.1); }
         .map-tooltip.show { opacity: 1; pointer-events: auto; }
         .map-tooltip img { width: 100%; height: 120px; object-fit: cover; border-radius: 8px; margin-bottom: 0.8rem; }
         .map-tooltip h4 { font-size: 0.9rem; font-weight: 500; margin-bottom: 0.2rem; color: var(--fern-deep); }
         .map-tooltip p { font-size: 0.78rem; color: var(--text-muted); line-height: 1.5; }
         .map-tooltip a { display: inline-block; margin-top: 0.5rem; font-size: 0.75rem; color: var(--fern); font-weight: 500; text-decoration: none; }
         .map-tooltip a:hover { color: var(--petal); }
-        .map-tooltip-close {
-            position: absolute; top: 8px; right: 10px;
-            background: none; border: none; font-size: 1rem;
-            color: var(--text-muted); cursor: pointer; line-height: 1;
-        }
-
-        /* PHD OVERVIEW */
+        .map-tooltip-close { position: absolute; top: 8px; right: 10px; background: none; border: none; font-size: 1rem; color: var(--text-muted); cursor: pointer; line-height: 1; }
         .phd-overview { font-size: 0.95rem; max-width: 750px; margin-bottom: 2.5rem; line-height: 1.8; }
         .phd-overview p { margin-bottom: 1rem; }
-        .phd-highlight {
-            display: inline-flex; align-items: center; gap: 0.8rem;
-            background: rgba(184,169,212,0.12);
-            border: 1px solid rgba(184,169,212,0.25);
-            border-radius: 10px; padding: 0.8rem 1.2rem;
-            margin-bottom: 1.5rem;
-        }
+        .phd-highlight { display: inline-flex; align-items: center; gap: 0.8rem; background: rgba(184,169,212,0.12); border: 1px solid rgba(184,169,212,0.25); border-radius: 10px; padding: 0.8rem 1.2rem; margin-bottom: 1.5rem; }
         .phd-highlight-label { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--lavender); font-weight: 500; }
         .phd-highlight-text { font-size: 0.85rem; color: rgba(184,169,212,0.85); }
-
-        /* RESEARCH CARDS */
         .research-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
         .research-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 14px; padding: 1.8rem; transition: all 0.4s; }
         .research-card:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.25); transform: translateY(-3px); }
@@ -214,8 +126,6 @@
         .research-card .about-tags { margin-top: 1rem; }
         .research-card .tag { border-color: rgba(184,169,212,0.4); color: rgba(184,169,212,0.8); background: rgba(184,169,212,0.1); }
         .research-card .tag:hover { background: var(--lavender); border-color: var(--lavender); color: #3d3460; }
-
-        /* FIELDWORK */
         .fieldwork-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.3rem; }
         .fieldwork-card { border-radius: 14px; overflow: hidden; background: #eef5fa; box-shadow: 0 6px 24px rgba(42,77,54,0.07); transition: transform 0.3s, box-shadow 0.3s; }
         .fieldwork-card:hover { transform: translateY(-3px); box-shadow: 0 14px 36px rgba(42,77,54,0.12); }
@@ -226,8 +136,56 @@
         .fieldwork-body h3 { font-size: 0.95rem; font-weight: 500; margin-bottom: 0.2rem; }
         .fieldwork-body p { font-size: 0.82rem; color: var(--text-muted); line-height: 1.6; }
         .fieldwork-location { font-size: 0.67rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--petal); font-weight: 500; margin-bottom: 0.25rem; }
+        .fieldwork-friends-link { display: flex; align-items: center; justify-content: center; margin-top: 2.5rem; }
+        .fieldwork-friends-link a { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.65rem 1.4rem; border: 1px solid var(--blossom); border-radius: 50px; color: var(--petal); text-decoration: none; font-size: 0.82rem; font-weight: 400; transition: all 0.3s; background: rgba(223,160,181,0.08); }
+        .fieldwork-friends-link a:hover { background: var(--petal); color: white; border-color: var(--petal); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(199,122,150,0.2); }
+        .fieldwork-friends-link a svg { width: 16px; height: 16px; transition: transform 0.3s; }
+        .fieldwork-friends-link a:hover svg { transform: scale(1.1); }
 
-        /* PUBLICATIONS */
+        /* ═══ FILM GALLERY ═══ */
+        .film-section { background: var(--cream); }
+        .film-section .section-label { color: var(--text-muted); }
+        .film-intro { font-size: 0.93rem; max-width: 600px; margin-bottom: 2.5rem; color: var(--text-muted); }
+        .film-grid { display: grid; grid-template-columns: repeat(12, 1fr); grid-auto-rows: 160px; gap: 0.8rem; }
+        .film-item { position: relative; border-radius: 6px; overflow: hidden; cursor: pointer; }
+        .film-item img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.6s ease; }
+        .film-item:hover img { transform: scale(1.04); }
+        .film-item-label { position: absolute; bottom: 0; left: 0; right: 0; padding: 2rem 0.8rem 0.6rem; background: linear-gradient(transparent, rgba(0,0,0,0.5)); color: white; font-size: 0.65rem; font-weight: 400; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0; transition: opacity 0.3s ease; }
+        .film-item:hover .film-item-label { opacity: 1; }
+        .film-item:nth-child(1) { grid-column: 1 / 6; grid-row: 1 / 3; }
+        .film-item:nth-child(2) { grid-column: 6 / 9; grid-row: 1 / 4; }
+        .film-item:nth-child(3) { grid-column: 9 / 13; grid-row: 1 / 3; }
+        .film-item:nth-child(4) { grid-column: 1 / 4; grid-row: 3 / 5; }
+        .film-item:nth-child(5) { grid-column: 4 / 6; grid-row: 3 / 5; }
+        .film-item:nth-child(6) { grid-column: 9 / 13; grid-row: 3 / 5; }
+        .film-item:nth-child(7) { grid-column: 6 / 9; grid-row: 4 / 6; }
+        .film-item:nth-child(8) { grid-column: 1 / 6; grid-row: 5 / 7; }
+        .film-strip-accent { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.3rem; }
+        .film-strip-accent svg { width: 20px; height: 20px; opacity: 0.35; }
+        .film-lightbox { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(42,77,54,0.92); backdrop-filter: blur(12px); z-index: 2000; display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: opacity 0.3s ease; cursor: pointer; }
+        .film-lightbox.open { opacity: 1; pointer-events: auto; }
+        .film-lightbox img { max-width: 90vw; max-height: 85vh; object-fit: contain; border-radius: 4px; box-shadow: 0 20px 80px rgba(0,0,0,0.4); }
+        .film-lightbox-caption { position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%); color: rgba(255,255,255,0.6); font-size: 0.75rem; letter-spacing: 0.06em; text-align: center; }
+        .film-lightbox-close { position: absolute; top: 1.5rem; right: 1.5rem; background: none; border: none; color: rgba(255,255,255,0.6); font-size: 1.5rem; cursor: pointer; transition: color 0.3s; line-height: 1; }
+        .film-lightbox-close:hover { color: white; }
+        @media (max-width: 900px) {
+            .film-grid { grid-template-columns: repeat(6, 1fr); grid-auto-rows: 130px; }
+            .film-item:nth-child(1) { grid-column: 1 / 4; grid-row: 1 / 3; }
+            .film-item:nth-child(2) { grid-column: 4 / 7; grid-row: 1 / 3; }
+            .film-item:nth-child(3) { grid-column: 1 / 4; grid-row: 3 / 5; }
+            .film-item:nth-child(4) { grid-column: 4 / 7; grid-row: 3 / 5; }
+            .film-item:nth-child(5) { grid-column: 1 / 4; grid-row: 5 / 7; }
+            .film-item:nth-child(6) { grid-column: 4 / 7; grid-row: 5 / 7; }
+            .film-item:nth-child(7) { grid-column: 1 / 4; grid-row: 7 / 9; }
+            .film-item:nth-child(8) { grid-column: 4 / 7; grid-row: 7 / 9; }
+        }
+        @media (max-width: 480px) {
+            .film-grid { grid-template-columns: 1fr 1fr; grid-auto-rows: 140px; }
+            .film-item:nth-child(1) { grid-column: 1 / 3; grid-row: auto; }
+            .film-item:nth-child(n) { grid-column: auto; grid-row: auto; }
+            .film-item:nth-child(6) { grid-column: 1 / 3; }
+        }
+
         .pub-item { padding: 1.4rem 0; border-bottom: 1px solid rgba(94,138,107,0.12); display: grid; grid-template-columns: auto 1fr auto; gap: 1.2rem; align-items: start; transition: padding-left 0.3s; }
         .pub-item:hover { padding-left: 0.4rem; }
         .pub-year { font-size: 1.1rem; font-weight: 500; color: var(--fern); min-width: 50px; }
@@ -235,8 +193,6 @@
         .pub-journal { font-size: 0.8rem; color: var(--text-muted); font-style: italic; }
         .pub-link { font-size: 0.76rem; color: var(--fern); text-decoration: none; border: 1px solid var(--moss); padding: 0.3rem 0.8rem; border-radius: 50px; transition: all 0.3s; white-space: nowrap; align-self: center; }
         .pub-link:hover { background: var(--fern); color: white; }
-
-        /* COMMUNICATION */
         .comms-layout { display: grid; grid-template-columns: 1.2fr 1fr; gap: 2.5rem; align-items: start; }
         .comms-text p { margin-bottom: 1rem; font-size: 0.93rem; }
         .comms-text a { color: var(--petal); text-decoration: none; border-bottom: 1px solid var(--blossom-soft); transition: all 0.3s; }
@@ -250,12 +206,10 @@
         .comms-card p { font-size: 0.8rem; color: var(--text-muted); }
         .comms-card a { color: var(--fern); text-decoration: none; font-size: 0.8rem; font-weight: 500; }
         .comms-card a:hover { color: var(--petal); }
-
         .group-banner { background-color: var(--meadow); padding: 2.5rem 2rem; text-align: center; }
         .group-banner p { font-size: 0.95rem; color: var(--text-muted); max-width: 600px; margin: 0 auto; }
         .group-banner a { color: var(--fern); text-decoration: none; font-weight: 500; border-bottom: 1px solid var(--moss); }
         .group-banner a:hover { color: var(--petal); border-color: var(--petal); }
-
         .contact-bg { background: linear-gradient(160deg, var(--fern-dark) 0%, var(--fern) 50%, var(--moss) 100%); color: white; }
         .contact-bg .section-label { color: var(--sage); }
         .contact-bg h2 { color: white; }
@@ -263,9 +217,7 @@
         .contact-links { display: flex; flex-wrap: wrap; gap: 0.7rem; }
         .contact-pill { color: white; text-decoration: none; padding: 0.55rem 1.2rem; border: 1px solid rgba(255,255,255,0.22); border-radius: 50px; font-size: 0.82rem; font-weight: 400; transition: all 0.3s; }
         .contact-pill:hover { background: rgba(255,255,255,0.12); border-color: rgba(255,255,255,0.4); transform: translateY(-2px); }
-
         footer { text-align: center; padding: 1.8rem; background: var(--fern-dark); color: rgba(255,255,255,0.3); font-size: 0.72rem; }
-
         .reveal { opacity: 0; transform: translateY(22px); transition: all 0.7s ease; }
         .reveal.visible { opacity: 1; transform: translateY(0); }
         @keyframes fadeUp { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: translateY(0); } }
@@ -273,7 +225,6 @@
         @keyframes floatPetal { 0% { transform: translateY(-10px) rotate(0deg); opacity: 0; } 8% { opacity: 0.45; } 92% { opacity: 0.45; } 100% { transform: translateY(100vh) rotate(340deg); opacity: 0; } }
         .floating-petal { position: absolute; pointer-events: none; z-index: 1; }
         .floating-petal svg { width: 14px; height: 14px; }
-
         @media (max-width: 900px) {
             .hero-content { grid-template-columns: 1fr; text-align: center; }
             .hero-desc { margin: 0 auto 2rem; }
@@ -304,7 +255,6 @@
     </style>
 </head>
 <body>
-
 <header id="header">
     <nav>
         <div class="logo">Talitha H. Neesham-McTiernan</div>
@@ -317,13 +267,13 @@
             <li><a href="#research">Research</a></li>
             <li><a href="#fieldwork">Fieldwork</a></li>
             <li><a href="#publications">Publications</a></li>
+            <li><a href="#film">Film</a></li>
             <li><a href="#communication">Communication</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 </header>
 
-<!-- HERO -->
 <section class="hero">
     <svg class="mountain-bg" viewBox="0 0 1440 400" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M0,310 Q60,240 140,270 Q220,200 320,250 Q380,180 460,220 Q540,160 640,210 Q720,170 800,200 Q880,150 960,190 Q1040,230 1120,185 Q1200,210 1280,230 Q1360,200 1440,240 L1440,400 L0,400 Z" fill="rgba(255,255,255,0.05)"/>
@@ -344,15 +294,10 @@
     <div class="scroll-indicator">Scroll<svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg></div>
 </section>
 
-<!-- ═══ GREEN WORLD ═══ -->
-
-<!-- ABOUT -->
 <div class="section-wrap green-light bg-photo bg-photo-about">
     <section id="about" class="section">
         <div class="about-grid">
-            <div class="about-image-col">
-                <img src="B2-sunflowers-standing-v2.jpg" alt="Talitha standing among sunflowers in an agrivoltaic system at Biosphere 2">
-            </div>
+            <div class="about-image-col"><img src="B2-sunflowers-standing-v2.jpg" alt="Talitha standing among sunflowers in an agrivoltaic system at Biosphere 2"></div>
             <div class="about-text-col reveal">
                 <div class="section-label">About me</div>
                 <h2>Bridging environmental science with human experience</h2>
@@ -360,19 +305,13 @@
                 <p>I believe the challenges reshaping agriculture, from rising temperatures and water scarcity to threats to worker health and food quality, cannot be fully understood or solved in isolation. That's why my research deliberately bridges mathematical modelling, field-based environmental measurements, laboratory analysis, and qualitative fieldwork.</p>
                 <p>Whether I'm calibrating sensors in 38&deg;C desert heat, sitting with farmworkers to understand their daily realities, or mapping climate projections through 2080, my goal is the same: ensuring that climate adaptation strategies respond to the needs of the communities they're meant to serve.</p>
                 <div class="about-tags">
-                    <span class="tag">Climate Adaptation</span>
-                    <span class="tag">Human-Environment Geography</span>
-                    <span class="tag">Mixed Methods</span>
-                    <span class="tag">Spatial Modeling</span>
-                    <span class="tag">Qualitative Research</span>
-                    <span class="tag">Agricultural Systems</span>
+                    <span class="tag">Climate Adaptation</span><span class="tag">Human-Environment Geography</span><span class="tag">Mixed Methods</span><span class="tag">Spatial Modeling</span><span class="tag">Qualitative Research</span><span class="tag">Agricultural Systems</span>
                 </div>
             </div>
         </div>
     </section>
 </div>
 
-<!-- JOURNEY -->
 <div class="section-wrap green-light">
     <img src="lake-district.jpg" alt="The Lake District, England" class="lake-banner">
     <section id="journey" class="section">
@@ -380,240 +319,112 @@
         <h2 class="reveal">A path from the Lakes to the desert</h2>
         <p class="section-intro reveal">From the green valleys of Northern England to the arid landscapes of Arizona, each stop shaped the researcher I am today.</p>
         <div class="journey-timeline">
-            <div class="journey-stop">
-                <div class="journey-location">Lake District, England</div>
-                <div class="journey-title">Where it began</div>
-                <p class="journey-desc">Growing up in a small town surrounded by fells and farmland, I developed an early awareness of how landscapes, weather, and livelihoods are inseparable.</p>
-            </div>
-            <div class="journey-stop">
-                <div class="journey-location">University of Sheffield</div>
-                <div class="journey-title">BSc, Physical Geography</div>
-                <p class="journey-desc">A foundation in geomorphology, climatology, and environmental systems; learning to read the physical forces that shape places and lives.</p>
-            </div>
-            <div class="journey-stop">
-                <div class="journey-location">University of Sheffield</div>
-                <div class="journey-title">MSc, Environmental Change &amp; International Development</div>
-                <p class="journey-desc">An interdisciplinary programme combining physical science of climate and environmental change with social science approaches to development. This is where my focus on bridging technical analysis with human perspectives began.</p>
-            </div>
-            <div class="journey-stop">
-                <div class="journey-location">University of Arizona</div>
-                <div class="journey-title">PhD, Geography</div>
-                <p class="journey-desc">Investigating agrivoltaics as a comprehensive climate adaptation strategy, combining spatial suitability modeling, farmworker heat stress research, and crop nutrient analysis across farms in Arizona and Colorado.</p>
-            </div>
+            <div class="journey-stop"><div class="journey-location">Lake District, England</div><div class="journey-title">Where it began</div><p class="journey-desc">Growing up in a small town surrounded by fells and farmland, I developed an early awareness of how landscapes, weather, and livelihoods are inseparable.</p></div>
+            <div class="journey-stop"><div class="journey-location">University of Sheffield</div><div class="journey-title">BSc, Physical Geography</div><p class="journey-desc">A foundation in geomorphology, climatology, and environmental systems; learning to read the physical forces that shape places and lives.</p></div>
+            <div class="journey-stop"><div class="journey-location">University of Sheffield</div><div class="journey-title">MSc, Environmental Change &amp; International Development</div><p class="journey-desc">An interdisciplinary programme combining physical science of climate and environmental change with social science approaches to development. This is where my focus on bridging technical analysis with human perspectives began.</p></div>
+            <div class="journey-stop"><div class="journey-location">University of Arizona</div><div class="journey-title">PhD, Geography</div><p class="journey-desc">Investigating agrivoltaics as a comprehensive climate adaptation strategy, combining spatial suitability modeling, farmworker heat stress research, and crop nutrient analysis across farms in Arizona and Colorado.</p></div>
         </div>
     </section>
     <img src="Arizona.jpg" alt="Arizona landscape" class="lake-banner">
 </div>
 
-<!-- RESEARCH MAP -->
 <div class="section-wrap green-light bg-photo bg-photo-map">
     <section class="section" style="padding-top: 0;">
         <div class="map-container reveal">
             <h3>Research across three continents</h3>
             <p style="text-align:center;font-size:0.8rem;color:var(--text-muted);margin-top:-0.5rem;margin-bottom:1.5rem;">Click a highlighted region to learn more</p>
             <div class="map-svg-wrap" id="world-map">
-                <!-- Tooltips -->
-                <div class="map-tooltip" id="tooltip-europe">
-                    <button class="map-tooltip-close" onclick="hideTooltip('europe')">&times;</button>
-                    <img src="GB.jpg" alt="Agrivoltaic research in Great Britain">
-                    <h4>Great Britain</h4>
-                    <p>Spatial suitability analysis for agrivoltaics across Great Britain, identifying where solar-agriculture integration could alleviate land use conflicts while supporting high-grade farmland. Published in Applied Energy.</p>
-                </div>
-                <div class="map-tooltip" id="tooltip-africa">
-                    <button class="map-tooltip-close" onclick="hideTooltip('africa')">&times;</button>
-                    <img src="https://talithahope.github.io/AV_Tanzania_Img1.jpg" alt="Fieldwork in East Africa">
-                    <h4>East Africa</h4>
-                    <p>Agrivoltaic suitability modeling with the World Agroforestry Center, identifying where solar-agriculture integration could support smallholder farming systems across the region.</p>
-                    <a href="https://talithahope.github.io/Agrivoltaics_suitability_East_Africa/" target="_blank">View interactive GIS project &rarr;</a>
-                </div>
-                <div class="map-tooltip" id="tooltip-sierraleone">
-                    <button class="map-tooltip-close" onclick="hideTooltip('sierraleone')">&times;</button>
-                    <img src="Bombali-farm.jpg" alt="Raised crop bed with peppers and mulch in Bombali, Sierra Leone">
-                    <h4>Sierra Leone</h4>
-                    <p>Mixed-methods research in Bombali exploring how farmworkers perceive and respond to climate change, and how their experiences compare with meteorological records.</p>
-                </div>
-                <div class="map-tooltip" id="tooltip-namerica">
-                    <button class="map-tooltip-close" onclick="hideTooltip('namerica')">&times;</button>
-                    <img src="JSG_2025_Potatoes.jpg" alt="Potato harvest at an agrivoltaic farm">
-                    <h4>American Southwest</h4>
-                    <p>PhD dissertation research: spatial suitability modeling through 2080, farmworker heat stress measurement and interviews, and crop nutrient analysis across agrivoltaic field sites in Arizona and Colorado.</p>
-                </div>
+                <div class="map-tooltip" id="tooltip-europe"><button class="map-tooltip-close" onclick="hideTooltip('europe')">&times;</button><img src="GB.jpg" alt="Agrivoltaic research in Great Britain"><h4>Great Britain</h4><p>Spatial suitability analysis for agrivoltaics across Great Britain, identifying where solar-agriculture integration could alleviate land use conflicts while supporting high-grade farmland. Published in Applied Energy.</p></div>
+                <div class="map-tooltip" id="tooltip-africa"><button class="map-tooltip-close" onclick="hideTooltip('africa')">&times;</button><img src="https://talithahope.github.io/AV_Tanzania_Img1.jpg" alt="Fieldwork in East Africa"><h4>East Africa</h4><p>Agrivoltaic suitability modeling with the World Agroforestry Center, identifying where solar-agriculture integration could support smallholder farming systems across the region.</p><a href="https://talithahope.github.io/Agrivoltaics_suitability_East_Africa/" target="_blank">View interactive GIS project &rarr;</a></div>
+                <div class="map-tooltip" id="tooltip-sierraleone"><button class="map-tooltip-close" onclick="hideTooltip('sierraleone')">&times;</button><img src="Bombali-farm.jpg" alt="Raised crop bed with peppers and mulch in Bombali, Sierra Leone"><h4>Sierra Leone</h4><p>Mixed-methods research in Bombali exploring how farmworkers perceive and respond to climate change, and how their experiences compare with meteorological records.</p></div>
+                <div class="map-tooltip" id="tooltip-namerica"><button class="map-tooltip-close" onclick="hideTooltip('namerica')">&times;</button><img src="JSG_2025_Potatoes.jpg" alt="Potato harvest at an agrivoltaic farm"><h4>American Southwest</h4><p>PhD dissertation research: spatial suitability modeling through 2080, farmworker heat stress measurement and interviews, and crop nutrient analysis across agrivoltaic field sites in Arizona and Colorado.</p></div>
             </div>
         </div>
     </section>
 </div>
-    
-<!-- PHD RESEARCH -->
+
 <div class="section-wrap green-dark">
     <section id="research" class="section">
         <div class="section-label reveal">PhD Research</div>
         <h2 class="reveal">Agrivoltaics as climate adaptation</h2>
-        <div class="phd-highlight reveal">
-            <div>
-                <div class="phd-highlight-label">Programme</div>
-                <div class="phd-highlight-text">Major: Geography &nbsp;|&nbsp; Minors: Geospatial Information Technologies &amp; Global Change</div>
-            </div>
-        </div>
+        <div class="phd-highlight reveal"><div><div class="phd-highlight-label">Programme</div><div class="phd-highlight-text">Major: Geography &nbsp;|&nbsp; Minors: Geospatial Information Technologies &amp; Global Change</div></div></div>
         <div class="phd-overview reveal">
             <p>My dissertation focuses on agrivoltaics, the integration of agriculture under and around solar panels, as a practical climate adaptation strategy. I ask whether a single intervention can simultaneously sustain agricultural production, advance renewable energy deployment, and protect the health of farmworkers.</p>
             <p>Agrivoltaic systems can shade and cool the environment beneath them, reducing moisture loss and directly countering several pressures climate change places on agriculture. My research examines this from three interconnected angles:</p>
         </div>
         <div class="research-cards">
-            <div class="research-card reveal">
-                <div class="research-card-number">01</div>
-                <h3>Where should agrivoltaics go?</h3>
-                <p>Drawing on field trials and large-scale geographic and climate data, I developed spatial models identifying where agrivoltaic systems would most effectively reduce water loss, buffer crops against extreme heat, and sustain productivity across the American Southwest. Because climate change is dynamic, my models evaluate present and future scenarios through 2080, mapping how optimal locations evolve through the century.</p>
-                <div class="about-tags">
-                    <span class="tag">Spatial MCDA</span>
-                    <span class="tag">Climate Projections</span>
-                    <span class="tag">GIS</span>
-                </div>
-            </div>
-            <div class="research-card reveal">
-                <div class="research-card-number">02</div>
-                <h3>Can they protect farmworkers?</h3>
-                <p>Farmworkers face heat-related mortality risks 20 to 35 times higher than indoor workers. Over three years, I measured heat stress on adjacent agrivoltaic and conventional farms, producing the first evidence that agrivoltaic systems can meaningfully reduce the heat burden farmworkers face. I pair sensor data with in-depth farmworker interviews, listening to how they experience heat across the working day.</p>
-                <div class="about-tags">
-                    <span class="tag">Microclimate</span>
-                    <span class="tag">Worker Health</span>
-                    <span class="tag">Participant Observation</span>
-                </div>
-            </div>
-            <div class="research-card reveal">
-                <div class="research-card-number">03</div>
-                <h3>What happens to the food?</h3>
-                <p>The same environmental stresses that endanger farmworkers also threaten the nutritional quality of crops. Across three years of field trials, I processed hundreds of samples from crops grown under both agrivoltaic and conventional conditions, analyzing changes in inorganic nutrient content including iron, zinc, and manganese.</p>
-                <div class="about-tags">
-                    <span class="tag">Crop Science</span>
-                    <span class="tag">Nutrient Analysis</span>
-                    <span class="tag">Food Quality</span>
-                </div>
-            </div>
+            <div class="research-card reveal"><div class="research-card-number">01</div><h3>Where should agrivoltaics go?</h3><p>Drawing on field trials and large-scale geographic and climate data, I developed spatial models identifying where agrivoltaic systems would most effectively reduce water loss, buffer crops against extreme heat, and sustain productivity across the American Southwest. Because climate change is dynamic, my models evaluate present and future scenarios through 2080, mapping how optimal locations evolve through the century.</p><div class="about-tags"><span class="tag">Spatial MCDA</span><span class="tag">Climate Projections</span><span class="tag">GIS</span></div></div>
+            <div class="research-card reveal"><div class="research-card-number">02</div><h3>Can they protect farmworkers?</h3><p>Farmworkers face heat-related mortality risks 20 to 35 times higher than indoor workers. Over three years, I measured heat stress on adjacent agrivoltaic and conventional farms, producing the first evidence that agrivoltaic systems can meaningfully reduce the heat burden farmworkers face. I pair sensor data with in-depth farmworker interviews, listening to how they experience heat across the working day.</p><div class="about-tags"><span class="tag">Microclimate</span><span class="tag">Worker Health</span><span class="tag">Participant Observation</span></div></div>
+            <div class="research-card reveal"><div class="research-card-number">03</div><h3>What happens to the food?</h3><p>The same environmental stresses that endanger farmworkers also threaten the nutritional quality of crops. Across three years of field trials, I processed hundreds of samples from crops grown under both agrivoltaic and conventional conditions, analyzing changes in inorganic nutrient content including iron, zinc, and manganese.</p><div class="about-tags"><span class="tag">Crop Science</span><span class="tag">Nutrient Analysis</span><span class="tag">Food Quality</span></div></div>
         </div>
     </section>
 </div>
 
-<!-- ═══ TRANSITION ═══ -->
 <div class="transition-divider"></div>
 
-<!-- ═══ BLOSSOM WORLD ═══ -->
-
-<!-- FIELDWORK -->
 <div class="section-wrap blossom-light" id="blossom-fieldwork">
     <section id="fieldwork" class="section">
         <div class="section-label reveal">In the field</div>
         <h2 class="reveal">Fieldwork highlights</h2>
         <p class="section-intro reveal">From desert agrivoltaic plots to Colorado's working farms; research that lives outside the office.</p>
         <div class="fieldwork-grid">
-            <div class="fieldwork-card featured reveal">
-                <img src="B2-sunflowers-standing-v2.jpg" alt="Among the sunflowers in an agrivoltaic system" class="fieldwork-img">
-                <div class="fieldwork-body">
-                    <div class="fieldwork-location">Biosphere 2, Arizona</div>
-                    <h3>Agrivoltaic research</h3>
-                    <p>Sunflowers thriving under solar panels at the University of Arizona's Biosphere 2 agrivoltaic field site.</p>
-                </div>
-            </div>
-            <div class="fieldwork-card reveal">
-                <img src="AES-ground-prep.jpg" alt="Tilling soil between rows of ground-mounted solar panels" class="fieldwork-img">
-                <div class="fieldwork-body">
-                    <div class="fieldwork-location">Eloy, Arizona</div>
-                    <h3>Retrofitting solar farms as agrivoltaics</h3>
-                    <p>Tilling between rows of ground-mounted solar panels as part of a project exploring whether existing large-scale solar farms can be retrofitted for agricultural production.</p>
-                </div>
-            </div>
-            <div class="fieldwork-card reveal">
-                <img src="AES-wiring.jpg" alt="Setting up a datalogger at a ground-mounted solar site" class="fieldwork-img">
-                <div class="fieldwork-body">
-                    <div class="fieldwork-location">Eloy, Arizona</div>
-                    <h3>Microclimate monitoring</h3>
-                    <p>Setting up the datalogger for microclimate monitoring at a ground-mounted solar site, capturing temperature, humidity, wind speed, and solar radiation.</p>
-                </div>
-            </div>
-            <div class="fieldwork-card reveal">
-                <img src="Colorado-licor.jpg" alt="Plant physiology measurements in crop rows" class="fieldwork-img">
-                <div class="fieldwork-body">
-                    <div class="fieldwork-location">Longmont, Colorado</div>
-                    <h3>Plant physiology measurements</h3>
-                    <p>Using LI-6400's to measure photosynthesis in crop rows, understanding how plants respond to the modified microclimate beneath solar panels compared to full sun.</p>
-                </div>
-            </div>
-            <div class="fieldwork-card reveal">
-                <img src="Tucson-sunflower.jpg" alt="Weighing a sunflower head for crop sampling" class="fieldwork-img">
-                <div class="fieldwork-body">
-                    <div class="fieldwork-location">Tucson, Arizona</div>
-                    <h3>Crop sampling &amp; nutrient analysis</h3>
-                    <p>Weighing a sunflower head as part of understanding how agrivoltaics change plant nutrient profiles.</p>
-                </div>
-            </div>
-            <div class="fieldwork-card reveal">
-                <img src="B2-chamber.jpg" alt="Automated soil CO2 chambers in an agrivoltaic field" class="fieldwork-img">
-                <div class="fieldwork-body">
-                    <div class="fieldwork-location">Biosphere 2, Arizona</div>
-                    <h3>Soil carbon &amp; gas exchange</h3>
-                    <p>Automated opaque chambers connected to a LI-COR infrared gas analyser system, measuring soil CO2 fluxes across agrivoltaic and conventional plots.</p>
-                </div>
-            </div>
-            <div class="fieldwork-card reveal">
-                <img src="Kenya-workshop.jpg" alt="Round table workshop on agrivoltaics in Kenya" class="fieldwork-img">
-                <div class="fieldwork-body">
-                    <div class="fieldwork-location">Nairobi, Kenya</div>
-                    <h3>Community workshops</h3>
-                    <p>A round table workshop exploring perceptions of agrivoltaics in Kenya, understanding how communities view the potential for integrating solar energy with agriculture.</p>
-                </div>
-            </div>
-            <div class="fieldwork-card reveal">
-                <img src="AV_Colorado_Img2.jpg" alt="Tomatoes in containers on the ground harvested by farmworkers in an agrivoltaic system" class="fieldwork-img">
-                <div class="fieldwork-body">
-                    <div class="fieldwork-location">Longmont, Colorado</div>
-                    <h3>Farmworker interviews</h3>
-                    <p>In-depth semi-structured interviews with farmworkers on agrivoltaic and conventional farms, understanding how they experience heat, shade, and working conditions across the season.</p>
-                </div>
-            </div>
-            <div class="fieldwork-card reveal">
-                <img src="Bombali-farm.jpg" alt="Raised crop bed with peppers and mulch on a farm in Bombali" class="fieldwork-img">
-                <div class="fieldwork-body">
-                    <div class="fieldwork-location">Bombali, Sierra Leone</div>
-                    <h3>Climate adaptation perceptions</h3>
-                    <p>Interviewing farmworkers about their experiences of climate change, documenting on-farm adaptation strategies, and comparing local knowledge with observed climate data.</p>
-                </div>
-            </div>
+            <div class="fieldwork-card featured reveal"><img src="B2-sunflowers-standing-v2.jpg" alt="Among the sunflowers in an agrivoltaic system" class="fieldwork-img"><div class="fieldwork-body"><div class="fieldwork-location">Biosphere 2, Arizona</div><h3>Agrivoltaic research</h3><p>Sunflowers thriving under solar panels at the University of Arizona's Biosphere 2 agrivoltaic field site.</p></div></div>
+            <div class="fieldwork-card reveal"><img src="AES-ground-prep.jpg" alt="Tilling soil between rows of ground-mounted solar panels" class="fieldwork-img"><div class="fieldwork-body"><div class="fieldwork-location">Eloy, Arizona</div><h3>Retrofitting solar farms as agrivoltaics</h3><p>Tilling between rows of ground-mounted solar panels as part of a project exploring whether existing large-scale solar farms can be retrofitted for agricultural production.</p></div></div>
+            <div class="fieldwork-card reveal"><img src="AES-wiring.jpg" alt="Setting up a datalogger at a ground-mounted solar site" class="fieldwork-img"><div class="fieldwork-body"><div class="fieldwork-location">Eloy, Arizona</div><h3>Microclimate monitoring</h3><p>Setting up the datalogger for microclimate monitoring at a ground-mounted solar site, capturing temperature, humidity, wind speed, and solar radiation.</p></div></div>
+            <div class="fieldwork-card reveal"><img src="Colorado-licor.jpg" alt="Plant physiology measurements in crop rows" class="fieldwork-img"><div class="fieldwork-body"><div class="fieldwork-location">Longmont, Colorado</div><h3>Plant physiology measurements</h3><p>Using LI-6400's to measure photosynthesis in crop rows, understanding how plants respond to the modified microclimate beneath solar panels compared to full sun.</p></div></div>
+            <div class="fieldwork-card reveal"><img src="Tucson-sunflower.jpg" alt="Weighing a sunflower head for crop sampling" class="fieldwork-img"><div class="fieldwork-body"><div class="fieldwork-location">Tucson, Arizona</div><h3>Crop sampling &amp; nutrient analysis</h3><p>Weighing a sunflower head as part of understanding how agrivoltaics change plant nutrient profiles.</p></div></div>
+            <div class="fieldwork-card reveal"><img src="B2-chamber.jpg" alt="Automated soil CO2 chambers in an agrivoltaic field" class="fieldwork-img"><div class="fieldwork-body"><div class="fieldwork-location">Biosphere 2, Arizona</div><h3>Soil carbon &amp; gas exchange</h3><p>Automated opaque chambers connected to a LI-COR infrared gas analyser system, measuring soil CO2 fluxes across agrivoltaic and conventional plots.</p></div></div>
+            <div class="fieldwork-card reveal"><img src="Kenya-workshop.jpg" alt="Round table workshop on agrivoltaics in Kenya" class="fieldwork-img"><div class="fieldwork-body"><div class="fieldwork-location">Nairobi, Kenya</div><h3>Community workshops</h3><p>A round table workshop exploring perceptions of agrivoltaics in Kenya, understanding how communities view the potential for integrating solar energy with agriculture.</p></div></div>
+            <div class="fieldwork-card reveal"><img src="AV_Colorado_Img2.jpg" alt="Tomatoes in containers on the ground harvested by farmworkers in an agrivoltaic system" class="fieldwork-img"><div class="fieldwork-body"><div class="fieldwork-location">Longmont, Colorado</div><h3>Farmworker interviews</h3><p>In-depth semi-structured interviews with farmworkers on agrivoltaic and conventional farms, understanding how they experience heat, shade, and working conditions across the season.</p></div></div>
+            <div class="fieldwork-card reveal"><img src="Bombali-farm.jpg" alt="Raised crop bed with peppers and mulch on a farm in Bombali" class="fieldwork-img"><div class="fieldwork-body"><div class="fieldwork-location">Bombali, Sierra Leone</div><h3>Climate adaptation perceptions</h3><p>Interviewing farmworkers about their experiences of climate change, documenting on-farm adaptation strategies, and comparing local knowledge with observed climate data.</p></div></div>
+        </div>
+        <div class="fieldwork-friends-link reveal">
+            <a href="fieldwork-friends.html">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><circle cx="9" cy="10" r="0.5" fill="currentColor"/><circle cx="15" cy="10" r="0.5" fill="currentColor"/></svg>
+                Meet the fieldwork friends &rarr;
+            </a>
         </div>
     </section>
 </div>
 
-<!-- PUBLICATIONS -->
 <div class="section-wrap blossom-warm bg-photo bg-photo-pubs">
     <section id="publications" class="section">
         <div class="section-label reveal">Publications</div>
         <h2 class="reveal">Selected work</h2>
-        <div class="pub-item reveal">
-            <div class="pub-year">2025</div>
-            <div class="pub-details">
-                <h3>The long-term suitability of agrivoltaics as a climate adaptation strategy in the southwestern United States</h3>
-                <div class="pub-journal">Neesham-McTiernan, T.H. &amp; Barron-Gafford, G.A. , Global Environmental Change Advances</div>
-            </div>
-            <a href="https://www.sciencedirect.com/science/article/pii/S2950138525000099" target="_blank" class="pub-link">View &rarr;</a>
+        <div class="pub-item reveal"><div class="pub-year">2025</div><div class="pub-details"><h3>The long-term suitability of agrivoltaics as a climate adaptation strategy in the southwestern United States</h3><div class="pub-journal">Neesham-McTiernan, T.H. &amp; Barron-Gafford, G.A. , Global Environmental Change Advances</div></div><a href="https://www.sciencedirect.com/science/article/pii/S2950138525000099" target="_blank" class="pub-link">View &rarr;</a></div>
+        <div class="pub-item reveal"><div class="pub-year">2025</div><div class="pub-details"><h3>The spatial potential for agrivoltaics to address energy-agriculture land use conflicts in Great Britain</h3><div class="pub-journal">Neesham-McTiernan, T.H., Randle-Boggis, R.J., Buckley, A.R. &amp; Hartley, S.E. , Applied Energy</div></div><a href="https://www.sciencedirect.com/science/article/pii/S0306261925002570" target="_blank" class="pub-link">View &rarr;</a></div>
+        <div class="pub-item reveal"><div class="pub-year">2025</div><div class="pub-details"><h3>Best Practices in Agrisolar</h3><div class="pub-journal">Co-author, AgriSolar Clearinghouse Technical Guide</div></div><a href="https://www.agrisolarclearinghouse.org/wp-content/uploads/2025/02/Best-Practices-in-Agrisolar.pdf" target="_blank" class="pub-link">View &rarr;</a></div>
+    </section>
+</div>
+
+<!-- ═══ FILM GALLERY ═══ -->
+<div class="section-wrap film-section">
+    <section id="film" class="section">
+        <div class="film-strip-accent reveal">
+            <svg viewBox="0 0 24 24" fill="none" stroke="var(--text-muted)" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="2"/><circle cx="12" cy="12" r="4"/><line x1="2" y1="6" x2="5" y2="6"/><line x1="2" y1="10" x2="5" y2="10"/><line x1="2" y1="14" x2="5" y2="14"/><line x1="2" y1="18" x2="5" y2="18"/><line x1="19" y1="6" x2="22" y2="6"/><line x1="19" y1="10" x2="22" y2="10"/><line x1="19" y1="14" x2="22" y2="14"/><line x1="19" y1="18" x2="22" y2="18"/></svg>
+            <div class="section-label">On film</div>
         </div>
-        <div class="pub-item reveal">
-            <div class="pub-year">2025</div>
-            <div class="pub-details">
-                <h3>The spatial potential for agrivoltaics to address energy-agriculture land use conflicts in Great Britain</h3>
-                <div class="pub-journal">Neesham-McTiernan, T.H., Randle-Boggis, R.J., Buckley, A.R. &amp; Hartley, S.E. , Applied Energy</div>
-            </div>
-            <a href="https://www.sciencedirect.com/science/article/pii/S0306261925002570" target="_blank" class="pub-link">View &rarr;</a>
-        </div>
-        <div class="pub-item reveal">
-            <div class="pub-year">2025</div>
-            <div class="pub-details">
-                <h3>Best Practices in Agrisolar</h3>
-                <div class="pub-journal">Co-author, AgriSolar Clearinghouse Technical Guide</div>
-            </div>
-            <a href="https://www.agrisolarclearinghouse.org/wp-content/uploads/2025/02/Best-Practices-in-Agrisolar.pdf" target="_blank" class="pub-link">View &rarr;</a>
+        <h2 class="reveal">Agrivoltaics around the world</h2>
+        <p class="film-intro reveal">Shot on 35mm while visiting agrivoltaic sites across Arizona, Japan, and South Korea. The same systems I study through data and models, seen through a different lens.</p>
+        <div class="film-grid reveal">
+            <div class="film-item" onclick="openLightbox(this)"><img src="japan_av_tall.jpg" alt="Agrivoltaic panels over green grain fields in Japan" loading="lazy"><div class="film-item-label">Japan</div></div>
+            <div class="film-item" onclick="openLightbox(this)"><img src="arizona_av_b2_portrait.jpg" alt="Agrivoltaic infrastructure at Biosphere 2, Arizona" loading="lazy"><div class="film-item-label">Biosphere 2, Arizona</div></div>
+            <div class="film-item" onclick="openLightbox(this)"><img src="japan_av_flowers.jpg" alt="Pink tulips under agrivoltaic panels in Japan" loading="lazy"><div class="film-item-label">Japan</div></div>
+            <div class="film-item" onclick="openLightbox(this)"><img src="south_korea_vertical_portrait.jpg" alt="Vertical agrivoltaic panels among crops in South Korea" loading="lazy"><div class="film-item-label">South Korea</div></div>
+            <div class="film-item" onclick="openLightbox(this)"><img src="japan_av_short_porttrait.jpg" alt="Shadow stripes under agrivoltaic panels in Japan" loading="lazy"><div class="film-item-label">Japan</div></div>
+            <div class="film-item" onclick="openLightbox(this)"><img src="japan_av_tractor.jpg" alt="Yellow tractor under agrivoltaic panels in Japan" loading="lazy"><div class="film-item-label">Japan</div></div>
+            <div class="film-item" onclick="openLightbox(this)"><img src="south_korea_av_raised.jpg" alt="Raised agrivoltaic panels over seedlings in South Korea" loading="lazy"><div class="film-item-label">South Korea</div></div>
+            <div class="film-item" onclick="openLightbox(this)"><img src="Japan_av_from_above.jpg" alt="View from above agrivoltaic panels in Japan" loading="lazy"><div class="film-item-label">Japan</div></div>
         </div>
     </section>
 </div>
 
-<!-- COMMUNICATION -->
+<div class="film-lightbox" id="film-lightbox" onclick="closeLightbox(event)">
+    <button class="film-lightbox-close" onclick="closeLightbox(event)">&times;</button>
+    <img id="lightbox-img" src="" alt="">
+    <div class="film-lightbox-caption" id="lightbox-caption"></div>
+</div>
+
 <div class="section-wrap blossom-light" id="blossom-comms">
     <section id="communication" class="section">
         <div class="section-label reveal">Science Communication</div>
@@ -625,46 +436,18 @@
                 <img src="https://talithahope.github.io/THNM_Agrivoltaics_world_confernce_presentation.jpg" alt="Presenting at the International Agrivoltaics Conference" class="conf-image">
             </div>
             <div class="comms-highlights reveal">
-                <div class="comms-card">
-                    <div class="comms-card-label">Essay</div>
-                    <h4>A Tale of Two Fields Told in Degrees Celsius</h4>
-                    <p>First-person science writing about daily life researching agrivoltaics in Arizona's desert heat.</p>
-                    <a href="https://www.terrain.org/2025/currents/a-tale-of-two-fields-told-in-degrees-celsius/" target="_blank">Read on Terrain.org &rarr;</a>
-                </div>
-                <div class="comms-card">
-                    <div class="comms-card-label">Press</div>
-                    <h4>AGU Newsroom Feature</h4>
-                    <p>Research on farmworker comfort under agrivoltaics featured ahead of the AGU25 annual meeting.</p>
-                    <a href="https://news.agu.org/press-release/solar-panels-over-crops-may-boost-farmworkers-comfort/" target="_blank">Read on AGU &rarr;</a>
-                </div>
-                <div class="comms-card">
-                    <div class="comms-card-label">Guide</div>
-                    <h4>Best Practices in Agrisolar</h4>
-                    <p>Co-authored practical guide translating research into actionable guidance for practitioners.</p>
-                    <a href="https://www.agrisolarclearinghouse.org/wp-content/uploads/2025/02/Best-Practices-in-Agrisolar.pdf" target="_blank">Download guide &rarr;</a>
-                </div>
-                <div class="comms-card">
-                    <div class="comms-card-label">Interactive</div>
-                    <h4>East Africa Agrivoltaic Suitability Map</h4>
-                    <p>Online GIS project visualising agrivoltaic suitability across East Africa.</p>
-                    <a href="https://talithahope.github.io/Agrivoltaics_suitability_East_Africa/" target="_blank">Explore the map &rarr;</a>
-                </div>
-                <div class="comms-card">
-                    <div class="comms-card-label">Conferences</div>
-                    <h4>AGU25 &amp; Agrivoltaics World Conference</h4>
-                    <p>International presentations on farmworker heat mitigation and spatial suitability for agrivoltaic deployment.</p>
-                </div>
+                <div class="comms-card"><div class="comms-card-label">Essay</div><h4>A Tale of Two Fields Told in Degrees Celsius</h4><p>First-person science writing about daily life researching agrivoltaics in Arizona's desert heat.</p><a href="https://www.terrain.org/2025/currents/a-tale-of-two-fields-told-in-degrees-celsius/" target="_blank">Read on Terrain.org &rarr;</a></div>
+                <div class="comms-card"><div class="comms-card-label">Press</div><h4>AGU Newsroom Feature</h4><p>Research on farmworker comfort under agrivoltaics featured ahead of the AGU25 annual meeting.</p><a href="https://news.agu.org/press-release/solar-panels-over-crops-may-boost-farmworkers-comfort/" target="_blank">Read on AGU &rarr;</a></div>
+                <div class="comms-card"><div class="comms-card-label">Guide</div><h4>Best Practices in Agrisolar</h4><p>Co-authored practical guide translating research into actionable guidance for practitioners.</p><a href="https://www.agrisolarclearinghouse.org/wp-content/uploads/2025/02/Best-Practices-in-Agrisolar.pdf" target="_blank">Download guide &rarr;</a></div>
+                <div class="comms-card"><div class="comms-card-label">Interactive</div><h4>East Africa Agrivoltaic Suitability Map</h4><p>Online GIS project visualising agrivoltaic suitability across East Africa.</p><a href="https://talithahope.github.io/Agrivoltaics_suitability_East_Africa/" target="_blank">Explore the map &rarr;</a></div>
+                <div class="comms-card"><div class="comms-card-label">Conferences</div><h4>AGU25 &amp; Agrivoltaics World Conference</h4><p>International presentations on farmworker heat mitigation and spatial suitability for agrivoltaic deployment.</p></div>
             </div>
         </div>
     </section>
 </div>
 
-<!-- ═══ BACK TO GREEN ═══ -->
 <div class="transition-divider"></div>
-
-<div class="group-banner bg-photo bg-photo-group">
-    <div><p>I'm part of the <a href="https://salsav.org/team" target="_blank">SALSA Agrivoltaics</a> research group at the University of Arizona, led by my supervisor Prof. Greg Barron-Gafford.</p></div>
-</div>
+<div class="group-banner bg-photo bg-photo-group"><div><p>I'm part of the <a href="https://salsav.org/team" target="_blank">SALSA Agrivoltaics</a> research group at the University of Arizona, led by my supervisor Prof. Greg Barron-Gafford.</p></div></div>
 
 <div class="section-wrap contact-bg">
     <section id="contact" class="section">
@@ -680,183 +463,32 @@
         </div>
     </section>
 </div>
-
-<footer><p>&copy; 2025 Talitha H. Neesham-McTiernan. All rights reserved.</p></footer>
+<footer><p>&copy; All images © 2025 Talitha H. Neesham-McTiernan. All rights reserved.</p></footer>
 
 <script>
-// Header
 const header = document.getElementById('header');
 window.addEventListener('scroll', () => { header.classList.toggle('scrolled', window.scrollY > 80); });
-
-// Reveal
-const obs = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+const obs = new IntersectionObserver((entries) => { entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }); }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 document.querySelectorAll('.reveal, .journey-stop').forEach(el => obs.observe(el));
+document.querySelectorAll('a[href^="#"]').forEach(a => { a.addEventListener('click', function(e) { e.preventDefault(); const t = document.querySelector(this.getAttribute('href')); if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' }); document.querySelector('.nav-links').classList.remove('open'); }); });
 
-// Smooth scroll
-document.querySelectorAll('a[href^="#"]').forEach(a => {
-    a.addEventListener('click', function(e) {
-        e.preventDefault();
-        const t = document.querySelector(this.getAttribute('href'));
-        if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        document.querySelector('.nav-links').classList.remove('open');
-    });
-});
+function openLightbox(el) { const img = el.querySelector('img'); const label = el.querySelector('.film-item-label'); document.getElementById('lightbox-img').src = img.src; document.getElementById('lightbox-img').alt = img.alt; document.getElementById('lightbox-caption').textContent = label ? label.textContent : ''; document.getElementById('film-lightbox').classList.add('open'); document.body.style.overflow = 'hidden'; }
+function closeLightbox(e) { if (e.target === document.getElementById('film-lightbox') || e.target.classList.contains('film-lightbox-close')) { document.getElementById('film-lightbox').classList.remove('open'); document.body.style.overflow = ''; } }
+document.addEventListener('keydown', (e) => { if (e.key === 'Escape') { document.getElementById('film-lightbox').classList.remove('open'); document.body.style.overflow = ''; } });
 
-// Map - render real world map with D3
 const mapScript = document.createElement('script');
 mapScript.src = 'https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js';
-mapScript.onload = () => {
-    const topoScript = document.createElement('script');
-    topoScript.src = 'https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js';
-    topoScript.onload = () => {
-        fetch('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json')
-            .then(r => r.json())
-            .then(world => {
-                const container = document.getElementById('world-map');
-                const width = container.offsetWidth;
-                const height = width * 0.5;
-
-                const svg = d3.select('#world-map')
-                    .insert('svg', ':first-child')
-                    .attr('width', width)
-                    .attr('height', height)
-                    .attr('viewBox', `0 0 ${width} ${height}`)
-                    .style('display', 'block');
-
-                const projection = d3.geoNaturalEarth1()
-                    .fitSize([width, height], topojson.feature(world, world.objects.countries));
-
-                const path = d3.geoPath().projection(projection);
-                const countries = topojson.feature(world, world.objects.countries).features;
-
-                // Region mapping by country ID (UN M49 codes)
-                const usa = ['840'];
-                const uk = ['826'];
-                const eastAfrica = ['834','404','646','108','729','800','728','706','231','262','232']; // Tanzania, Kenya, Rwanda, Burundi, Sudan, Uganda, South Sudan, Somalia, Ethiopia, Djibouti, Eritrea
-                const sierraLeone = ['694'];
-                function getRegion(id) {
-                    if (usa.includes(id)) return 'namerica';
-                    if (uk.includes(id)) return 'europe';
-                    if (eastAfrica.includes(id)) return 'africa';
-                    if (sierraLeone.includes(id)) return 'sierraleone';
-                    return null;
-                }
-
-                svg.selectAll('path')
-                    .data(countries)
-                    .enter()
-                    .append('path')
-                    .attr('d', path)
-                    .attr('fill', d => {
-                        const region = getRegion(d.id);
-                        return region ? '#7aab88' : '#c8d5cb';
-                    })
-                    .attr('stroke', '#e8f2ea')
-                    .attr('stroke-width', 0.5)
-                    .attr('opacity', d => getRegion(d.id) ? 0.6 : 0.35)
-                    .style('cursor', d => getRegion(d.id) ? 'pointer' : 'default')
-                    .on('mouseenter', function(event, d) {
-                        const region = getRegion(d.id);
-                        if (region) {
-                            svg.selectAll('path')
-                                .filter(dd => getRegion(dd.id) === region)
-                                .transition().duration(200)
-                                .attr('fill', '#3a6b4a')
-                                .attr('opacity', 0.8);
-                        }
-                    })
-                    .on('mouseleave', function(event, d) {
-                        const region = getRegion(d.id);
-                        if (region && activeRegion !== region) {
-                            svg.selectAll('path')
-                                .filter(dd => getRegion(dd.id) === region)
-                                .transition().duration(200)
-                                .attr('fill', '#7aab88')
-                                .attr('opacity', 0.6);
-                        }
-                    })
-                    .on('click', function(event, d) {
-                        const region = getRegion(d.id);
-                        if (region) {
-                            event.stopPropagation();
-                            showTooltip(region);
-                            // Darken active region
-                            svg.selectAll('path').each(function(dd) {
-                                const r = getRegion(dd.id);
-                                d3.select(this)
-                                    .transition().duration(200)
-                                    .attr('fill', r === region ? '#3a6b4a' : (r ? '#7aab88' : '#c8d5cb'))
-                                    .attr('opacity', r === region ? 0.8 : (r ? 0.6 : 0.35));
-                            });
-                        }
-                    });
-            });
-    };
-    document.head.appendChild(topoScript);
-};
+mapScript.onload = () => { const topoScript = document.createElement('script'); topoScript.src = 'https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js'; topoScript.onload = () => { fetch('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json').then(r => r.json()).then(world => { const container = document.getElementById('world-map'); const width = container.offsetWidth; const height = width * 0.5; const svg = d3.select('#world-map').insert('svg', ':first-child').attr('width', width).attr('height', height).attr('viewBox', `0 0 ${width} ${height}`).style('display', 'block'); const projection = d3.geoNaturalEarth1().fitSize([width, height], topojson.feature(world, world.objects.countries)); const path = d3.geoPath().projection(projection); const countries = topojson.feature(world, world.objects.countries).features; const usa = ['840']; const uk = ['826']; const eastAfrica = ['834','404','646','108','729','800','728','706','231','262','232']; const sierraLeone = ['694']; window.getRegion = function(id) { if (usa.includes(id)) return 'namerica'; if (uk.includes(id)) return 'europe'; if (eastAfrica.includes(id)) return 'africa'; if (sierraLeone.includes(id)) return 'sierraleone'; return null; }; svg.selectAll('path').data(countries).enter().append('path').attr('d', path).attr('fill', d => { const region = getRegion(d.id); return region ? '#7aab88' : '#c8d5cb'; }).attr('stroke', '#e8f2ea').attr('stroke-width', 0.5).attr('opacity', d => getRegion(d.id) ? 0.6 : 0.35).style('cursor', d => getRegion(d.id) ? 'pointer' : 'default').on('mouseenter', function(event, d) { const region = getRegion(d.id); if (region) { svg.selectAll('path').filter(dd => getRegion(dd.id) === region).transition().duration(200).attr('fill', '#3a6b4a').attr('opacity', 0.8); } }).on('mouseleave', function(event, d) { const region = getRegion(d.id); if (region && activeRegion !== region) { svg.selectAll('path').filter(dd => getRegion(dd.id) === region).transition().duration(200).attr('fill', '#7aab88').attr('opacity', 0.6); } }).on('click', function(event, d) { const region = getRegion(d.id); if (region) { event.stopPropagation(); showTooltip(region); svg.selectAll('path').each(function(dd) { const r = getRegion(dd.id); d3.select(this).transition().duration(200).attr('fill', r === region ? '#3a6b4a' : (r ? '#7aab88' : '#c8d5cb')).attr('opacity', r === region ? 0.8 : (r ? 0.6 : 0.35)); }); } }); }); }; document.head.appendChild(topoScript); };
 document.head.appendChild(mapScript);
 
-// Map tooltip logic
 let activeRegion = null;
+function showTooltip(region) { document.querySelectorAll('.map-tooltip').forEach(t => t.classList.remove('show')); if (activeRegion === region) { activeRegion = null; return; } const tooltip = document.getElementById('tooltip-' + region); const positions = { europe: { top: '5%', left: '58%' }, africa: { top: '25%', left: '62%' }, sierraleone: { top: '40%', left: '42%' }, namerica: { top: '10%', left: '22%' } }; const pos = positions[region] || { top: '20%', left: '30%' }; tooltip.style.top = pos.top; tooltip.style.left = pos.left; tooltip.classList.add('show'); activeRegion = region; }
+function hideTooltip(region) { document.getElementById('tooltip-' + region).classList.remove('show'); activeRegion = null; if (typeof d3 !== 'undefined' && typeof getRegion !== 'undefined') { d3.select('#world-map svg').selectAll('path').each(function(d) { const r = d && d.id ? getRegion(d.id) : null; d3.select(this).transition().duration(200).attr('fill', r ? '#7aab88' : '#c8d5cb').attr('opacity', r ? 0.6 : 0.35); }); } }
+document.addEventListener('click', (e) => { if (!e.target.closest('.map-svg-wrap')) { document.querySelectorAll('.map-tooltip').forEach(t => t.classList.remove('show')); activeRegion = null; } });
 
-function showTooltip(region) {
-    document.querySelectorAll('.map-tooltip').forEach(t => t.classList.remove('show'));
-    if (activeRegion === region) { activeRegion = null; return; }
-
-    const tooltip = document.getElementById('tooltip-' + region);
-    const positions = {
-        europe: { top: '5%', left: '58%' },
-        africa: { top: '25%', left: '62%' },
-        sierraleone: { top: '40%', left: '42%' },
-        namerica: { top: '10%', left: '22%' }
-    };
-    const pos = positions[region] || { top: '20%', left: '30%' };
-    tooltip.style.top = pos.top;
-    tooltip.style.left = pos.left;
-    tooltip.classList.add('show');
-    activeRegion = region;
-}
-
-function hideTooltip(region) {
-    document.getElementById('tooltip-' + region).classList.remove('show');
-    activeRegion = null;
-    // Reset all research regions using the same getRegion logic
-    if (typeof d3 !== 'undefined') {
-        d3.select('#world-map svg').selectAll('path').each(function(d) {
-            const r = d && d.id ? getRegion(d.id) : null;
-            d3.select(this).transition().duration(200)
-                .attr('fill', r ? '#7aab88' : '#c8d5cb')
-                .attr('opacity', r ? 0.6 : 0.35);
-        });
-    }
-}
-
-document.addEventListener('click', (e) => {
-    if (!e.target.closest('.map-svg-wrap')) {
-        document.querySelectorAll('.map-tooltip').forEach(t => t.classList.remove('show'));
-        activeRegion = null;
-    }
-});
-
-// Cherry blossom petals
-function addPetals(id, n) {
-    const c = document.getElementById(id);
-    if (!c) return;
-    for (let i = 0; i < n; i++) {
-        const p = document.createElement('div');
-        p.className = 'floating-petal';
-        const cols = ['#dfa0b5','#edc4d2','#c77a96','#f0d0dd'];
-        p.innerHTML = '<svg viewBox="0 0 20 20"><path d="M10,2 Q14,6 12,10 Q14,14 10,18 Q6,14 8,10 Q6,6 10,2Z" fill="'+cols[Math.floor(Math.random()*cols.length)]+'" opacity="0.45"/></svg>';
-        p.style.left = Math.random()*100+'%';
-        p.style.animation = 'floatPetal '+(9+Math.random()*10)+'s linear '+(Math.random()*14)+'s infinite';
-        c.appendChild(p);
-    }
-}
+function addPetals(id, n) { const c = document.getElementById(id); if (!c) return; for (let i = 0; i < n; i++) { const p = document.createElement('div'); p.className = 'floating-petal'; const cols = ['#dfa0b5','#edc4d2','#c77a96','#f0d0dd']; p.innerHTML = '<svg viewBox="0 0 20 20"><path d="M10,2 Q14,6 12,10 Q14,14 10,18 Q6,14 8,10 Q6,6 10,2Z" fill="'+cols[Math.floor(Math.random()*cols.length)]+'" opacity="0.45"/></svg>'; p.style.left = Math.random()*100+'%'; p.style.animation = 'floatPetal '+(9+Math.random()*10)+'s linear '+(Math.random()*14)+'s infinite'; c.appendChild(p); } }
 addPetals('blossom-fieldwork', 8);
 addPetals('blossom-comms', 6);
 </script>
-
 </body>
 </html>
