@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fieldwork Friends — Talitha H. Neesham-McTiernan</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --fern: #5e8a6b; --fern-deep: #3a6b4a; --fern-dark: #2a4d36;
+            --moss: #7aab88; --sage: #9fc5a8; --meadow: #e8f2ea; --meadow-light: #f2f8f3;
+            --blossom: #dfa0b5; --blossom-soft: #edc4d2; --blossom-pale: #fdf2f5;
+            --petal: #c77a96; --cream: #faf9f6;
+            --text: #2e4238; --text-muted: #6a7e72; --white: #ffffff;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Lexend', sans-serif; font-weight: 300; color: var(--text); background: var(--cream); line-height: 1.7; }
+        .back-link { display: inline-flex; align-items: center; gap: 0.4rem; padding: 1.5rem 2rem; color: var(--fern); text-decoration: none; font-size: 0.82rem; font-weight: 400; transition: color 0.3s; }
+        .back-link:hover { color: var(--petal); }
+        .back-link svg { width: 16px; height: 16px; }
+        .friends-hero { background: linear-gradient(170deg, var(--blossom-pale) 0%, var(--cream) 100%); padding: 3rem 2rem 4rem; text-align: center; }
+        .friends-hero .section-label { font-size: 0.7rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--petal); margin-bottom: 0.5rem; }
+        .friends-hero h1 { font-size: clamp(1.8rem, 3vw, 2.6rem); font-weight: 400; margin-bottom: 1rem; letter-spacing: -0.01em; }
+        .friends-hero p { font-size: 0.95rem; color: var(--text-muted); max-width: 520px; margin: 0 auto; }
+        .friends-coming { max-width: 600px; margin: 0 auto; padding: 4rem 2rem; text-align: center; }
+        .friends-coming .emoji { font-size: 3rem; margin-bottom: 1rem; }
+        .friends-coming h2 { font-size: 1.3rem; font-weight: 400; margin-bottom: 0.6rem; }
+        .friends-coming p { color: var(--text-muted); font-size: 0.9rem; }
+        .friends-grid { max-width: 1000px; margin: 0 auto; padding: 0 2rem 4rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.2rem; }
+        .friend-card { border-radius: 14px; overflow: hidden; background: var(--white); box-shadow: 0 4px 18px rgba(42,77,54,0.06); transition: transform 0.3s, box-shadow 0.3s; }
+        .friend-card:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(42,77,54,0.1); }
+        .friend-card img { width: 100%; height: 200px; object-fit: cover; display: block; }
+        .friend-card-body { padding: 1rem 1.2rem; }
+        .friend-card-body h3 { font-size: 0.9rem; font-weight: 500; margin-bottom: 0.15rem; }
+        .friend-card-body .species { font-size: 0.75rem; color: var(--text-muted); font-style: italic; }
+        .friend-card-body .location { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--petal); font-weight: 500; margin-top: 0.3rem; }
+        footer { text-align: center; padding: 1.8rem; background: var(--fern-dark); color: rgba(255,255,255,0.3); font-size: 0.72rem; }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        Back to main site
+    </a>
+    <div class="friends-hero">
+        <div class="section-label">Fieldwork friends</div>
+        <h1>The creatures we've met along the way</h1>
+        <p>Not all fieldwork companions walk on two legs. These are some of the animals, insects, and other visitors we've encountered while collecting data.</p>
+    </div>
+    <div class="friends-grid">
+        <div class="friend-card">
+            <img src="field_friend_spider.jpg" alt="A huntsman spider perched on equipment at a field site">
+            <div class="friend-card-body">
+                <h3>The Equipment Inspector</h3>
+                <div class="species">Huntsman spider</div>
+                <div class="location">Arizona</div>
+            </div>
+        </div>
+        <div class="friend-card">
+            <img src="field-friend-bunny.jpg" alt="A cottontail rabbit hiding between crop rows marked with pink flagging tape">
+            <div class="friend-card-body">
+                <h3>The Crop Sampler</h3>
+                <div class="species">Desert cottontail</div>
+                <div class="location">Colorado</div>
+            </div>
+        </div>
+        <div class="friend-card">
+            <img src="field-friend-frogs.jpg" alt="A toad sitting on a large chard leaf">
+            <div class="friend-card-body">
+                <h3>The Leaf Lounger</h3>
+                <div class="species">Toad</div>
+                <div class="location">Arizona</div>
+            </div>
+        </div>
+        <div class="friend-card">
+            <img src="field-firend-rattlesnake.jpg" alt="A rattlesnake coiled among vegetation and irrigation lines">
+            <div class="friend-card-body">
+                <h3>The One We Gave Space</h3>
+                <div class="species">Rattlesnake</div>
+                <div class="location">Arizona</div>
+            </div>
+        </div>
+        <div class="friend-card">
+            <img src="field-friend-scorpian.jpg" alt="A scorpion on cracked dry earth">
+            <div class="friend-card-body">
+                <h3>The Boot-Check Reminder</h3>
+                <div class="species">Scorpion</div>
+                <div class="location">Arizona</div>
+            </div>
+        </div>
+        <div class="friend-card">
+            <img src="field-friend-yellow-belly.jpg" alt="A leaf-footed bug on a sunflower head under agrivoltaic panels">
+            <div class="friend-card-body">
+                <h3>The Sunflower Squatter</h3>
+                <div class="species">Leaf-footed bug</div>
+                <div class="location">Biosphere 2, Arizona</div>
+            </div>
+        </div>
+        <div class="friend-card">
+            <img src="field-firend-caterpillar-yellow.jpg" alt="A bright yellow spiky caterpillar on an irrigation pipe">
+            <div class="friend-card-body">
+                <h3>The Pipe Crawler</h3>
+                <div class="species">Tussock moth caterpillar</div>
+                <div class="location">Arizona</div>
+            </div>
+        </div>
+        <div class="friend-card">
+            <img src="field-friend-caterpillar.jpg" alt="A dark fuzzy caterpillar on cracked desert soil">
+            <div class="friend-card-body">
+                <h3>The Desert Commuter</h3>
+                <div class="species">Caterpillar</div>
+                <div class="location">Arizona</div>
+            </div>
+        </div>
+        <div class="friend-card">
+            <img src="field-friend-spider_2.jpg" alt="A spider on a green metal surface at a field site">
+            <div class="friend-card-body">
+                <h3>The Second Inspector</h3>
+                <div class="species">Spider</div>
+                <div class="location">Arizona</div>
+            </div>
+        </div>
+        <!-- To add another friend, copy a card block above and update the image, name, and location -->
+    </div>
+    <footer><p>&copy; 2025 Talitha H. Neesham-McTiernan. All rights reserved.</p></footer>
+</body>
+</html>
